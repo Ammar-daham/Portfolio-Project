@@ -4,13 +4,13 @@ import Typed from "react-typed";
 
 const Header = () => {
     return (
-        <div className="header-wraper"> 
+        <div className="header-wraper" id="header"> 
             <div className="main-info">
-                <h1>web development and websites promotion</h1>
+                <h1>web development and Software production</h1>
                 <Typed
                     className="typed-text"
-                    strings={["Web Design", "Web Development"]}
-                    typeSpeed={40}
+                    strings={["Web Design", "Web Development", "Software production"]}
+                    typeSpeed={50}
                     backSpeed={60}
                     loop
                 />

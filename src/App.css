@@ -7,10 +7,11 @@
   --primary-dark: rgba(255,255,255,0);
   --primary-red: #ef4035;
   --primary-hover-red: #f33501;
+  --primary-hover-blue: #4a6a93;
 }
 
 body{
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif I !important;
 }
 
 /******************************* NAVBAR ***********************/
@@ -97,7 +98,6 @@ nav ul li{
 /******************************* Typed-text ***********************/
 .typed-text {
   font-size: 2rem; 
-  font-weight: bold;
   color: var(--primary-white);
 }
 
@@ -112,7 +112,7 @@ nav ul li{
 /******************** Header main offer btn ***********************/
 .btn-main-offer {
   text-decoration: none;
-  border: 1px solid var(--primary-red);
+  border: 1px solid var(--primary-orange);
   text-transform: uppercase;
   border-radius: 0;
   padding: 0.625rem 0.75rem 0.75rem 0.75rem;
@@ -122,7 +122,7 @@ nav ul li{
 
 .btn-main-offer:hover {
   text-decoration: none;
-  background-color: var(--primary-hover-red);
+  background-color: var(--primary-hover-blue);
   color: var(--primary-white);
   transition: .2s ease-in-out;
 }
@@ -140,5 +140,34 @@ nav ul li{
   .particles-canvas {
     display: none;
   }
-
 }
+
+/********************* About me **************************/
+
+.photo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+ width: 50%;
+ border-radius: 50%;
+ padding: .3rem;
+ border: 1px solid var(--primary-orange);
+}
+
+.about-heading{
+  color: var(--primary-orange);
+  text-transform: uppercase;
+}
+
+@media(max-width: 468px) {
+  .profile-img {
+    width: 10rem;
+  }
+  
+}
+
+
+
