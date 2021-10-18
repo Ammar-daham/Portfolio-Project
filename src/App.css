@@ -8,8 +8,9 @@
   --primary-red: #ef4035;
   --primary-hover-red: #f33501;
   --primary-hover-blue: #4a6a93;
-  --primary-gray: #ccd1d9;
+  --primary-gray: #ebebeb;
   --primary-dark-gray: #666666;
+  --primary-black: #000000;
 }
 
 body{
@@ -258,3 +259,94 @@ nav ul li{
     width: 100%;
   }
 }
+
+/******************************* MyProject ********************/
+.myproject-wraper {
+  background:  var(--primary-gray);
+  padding: 3rem;
+}
+
+
+.my-project-image {
+  width: 15rem;
+  height: 10rem;
+  border: 1px solid var(--primary-orange);
+  padding: 0.5rem;
+}
+
+.project-image-box {
+  position: relative;
+  min-width: 340px;
+  width: 400px;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/******************************* Overflow Box ********************/
+.overflow {
+   position: absolute;
+   opacity: 0;
+   background: var(--primary-black);
+   width:  15rem;
+   height: 10rem;
+   top: 0;
+   border: 1px solid var(--primary-red);
+   cursor: pointer;
+}
+
+.project-image-box:hover .overflow {
+  opacity: 60%;
+  transition: 0.3s ease-in-out;
+}
+
+.project-icon {
+  position: absolute;
+  opacity: 0;
+  margin-left: 0.3rem;
+  margin-top: 1rem;
+  color: var(--primary-orange); 
+  font-size: 1.5rem;
+}
+
+.project-image-box:hover .project-icon {
+  opacity: 70%;
+  transition: 0.3 ease-in-out;
+  cursor: pointer;
+}
+
+/******************************* popupbox ********************/
+.image-popupbox {
+  width: 45rem;
+  padding: 0 0.5rem;
+}
+
+.hyper-link {
+  cursor: pointer;
+  color: var(--primary-orange);
+  padding: 0 0.5rem;
+}
+
+
+.hyper-link:hover {
+  cursor: pointer;
+  color: var(--primary-hover-blue);
+}
+
+@media (max-width: 800px) {
+  .image-popupbox {
+    width: 100%;
+  }
+  .hyper-link {
+    size: 50%;
+  }
+}
+
+

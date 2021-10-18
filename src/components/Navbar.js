@@ -26,10 +26,10 @@ const Navbar = () => {
                             <a className="nav-link" href="#education">Education</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">experince</a>
+                            <a className="nav-link" href="https://drive.google.com/file/d/11M4TSlbJPVWFtq9LeIiaGINrScy3cE6e/view?usp=sharing" target="_blank">Resume</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">portfolio</a>
+                            <a className="nav-link" href="#myProjectWraper">My Projects</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">contact me</a>
