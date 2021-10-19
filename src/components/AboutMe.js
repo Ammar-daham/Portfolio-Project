@@ -18,7 +18,7 @@ const AboutMe = () => {
                         I have a bachelor degree from the college of education, department of computer science and manthmatics at the university of Mosul.
                         Also, I hold a basic degree from Omnia Vocational School in infromation and communication technology
                         I am experienced in web development.
-                        As a worker, I am detail-oriented and result-driven. I work well with others and part of a team. I do not shy away from delegation of
+                        As a worker, I am detail-oriented and result-driven. I work well with others and part of a team. I do not shy away from delegation of work.
                     </p>
                 </div>
             </div>

@@ -32,7 +32,7 @@ const Navbar = () => {
                             <a className="nav-link" href="#myProjectWraper">My Projects</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" >contact me</a>
+                            <a className="nav-link" href="#contactMe">contact me</a>
                         </li>
                     </ul>
                 </div>

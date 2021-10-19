@@ -21,7 +21,7 @@ const Education = () => {
                     <div className="marker"></div>
                     <div className="timeline-content">
                         <h3>2018-2020</h3>
-                        <h5> Omnia vocational school - Information Technology</h5>
+                        <h5> Omnia Vocational School - Information Technology</h5>
     
                         <p>
                             Studied information and communications technology.
