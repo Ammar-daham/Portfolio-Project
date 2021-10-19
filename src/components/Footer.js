@@ -28,18 +28,18 @@ const Footer = () => {
                     <div className="col-lg-3 col-md-2 col-sm-6">
                         <div className="row">
                             <div className="col">
-                                <a className="footer-nav">Home</a>
+                                <a className="footer-nav" href="#header">Home</a>
                                 <br />
-                                <a className="footer-nav">About me</a>
+                                <a className="footer-nav" href="#about-me">About me</a>
                                 <br />
-                                <a className="footer-nav">Education</a>
+                                <a className="footer-nav" href="#education">Education</a>
                             </div>
                             <div className="col">
-                                <a className="footer-nav">Resume</a>
+                                <a className="footer-nav" href="https://drive.google.com/file/d/11M4TSlbJPVWFtq9LeIiaGINrScy3cE6e/view?usp=sharing" target="_blank">Resume</a>
                                 <br />
-                                <a className="footer-nav">My Projects</a>
+                                <a className="footer-nav" href="#myProjectWraper">My Projects</a>
                                 <br />
-                                <a className="footer-nav">Contact me</a>
+                                <a className="footer-nav" href="#contactMe">Contact me</a>
                             </div>
                         </div>
                     </div>
