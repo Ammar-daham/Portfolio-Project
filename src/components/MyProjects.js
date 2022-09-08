@@ -14,9 +14,9 @@ const MyProjects = () => {
         <>
             <img className="image-popupbox" src={MyFirstProject} alt="Coffee Web Page HTML and CSS Project"/>
             <p></p>
-            <b>GitHub:</b><a className="hyper-link" onClick={() => window.open("https://github.com/ammaraljewary/HTML-CSS-project")}>https://github.com/ammaraljewary/HTML-CSS-project</a>
+            <b>GitHub:</b><a href="so" className="hyper-link" onClick={() => window.open("https://github.com/ammaraljewary/HTML-CSS-project")}>https://github.com/ammaraljewary/HTML-CSS-project</a>
             <br/>
-            <b>Demo:</b><a className="hyper-link" onClick={() => window.open("https://kind-cori-d632bc.netlify.app")}>https://kind-cori-d632bc.netlify.app</a>
+            <b>Demo:</b><a href="so" className="hyper-link" onClick={() => window.open("https://kind-cori-d632bc.netlify.app")}>https://kind-cori-d632bc.netlify.app</a>
         </>
         )
         PopupboxManager.open({content})
@@ -37,9 +37,9 @@ const MyProjects = () => {
         <>
             <img className="image-popupbox" src={Basaari} alt="e-commerce website HTML, CSS and JavaScript Project"/>
             <p></p>
-            <b>GitHub:</b><a className="hyper-link" onClick={() => window.open("https://github.com/ammaraljewary/web-tekniikka-projektti")}>https://github.com/ammaraljewary/HTML-CSS-project</a>
+            <b>GitHub:</b><a href="so" className="hyper-link" onClick={() => window.open("https://github.com/ammaraljewary/web-tekniikka-projektti")}>https://github.com/ammaraljewary/HTML-CSS-project</a>
             <br/>
-            <b>Demo:</b><a className="hyper-link" onClick={() => window.open("https://agitated-bell-327c49.netlify.app/")}>https://agitated-bell-327c49.netlify.app/</a>
+            <b>Demo:</b><a href="so" className="hyper-link" onClick={() => window.open("https://agitated-bell-327c49.netlify.app/")}>https://agitated-bell-327c49.netlify.app/</a>
         </>
         )
         PopupboxManager.open({content})

@@ -11,29 +11,29 @@ const ContactMe = () => {
     const templateID = "template_ID";
     const userID = "user_uOx1jFjIYhSI0TgkAAbGc";
 
-    const onSubmit = (data, r) => {
-        sendEmail(
-            serviceID,
-            templateID,
-            {
-               name:  data.name,
-               phone: data.phone,
-               email: data.email,
-               subject: data.subject,
-               message: data.message 
-            },
-            userID
-            )
-            r.target.reset();
-    } 
+    // const onSubmit = (data, r) => {
+    //     sendEmail(
+    //         serviceID,
+    //         templateID,
+    //         {
+    //            name:  data.name,
+    //            phone: data.phone,
+    //            email: data.email,
+    //            subject: data.subject,
+    //            message: data.message 
+    //         },
+    //         userID
+    //         )
+    //         r.target.reset();
+    // } 
     
 
-    const sendEmail = (serviceID, templateID, variables, userID) => {
-      emailjs.send(serviceID, templateID, variables, userID)
-        .then(() => {
-            setSuccessMessage("Form sent successfully! I'll contact you as soon as possible.");
-        }).catch(err => console.error(`Something went wrong ${err}`));
-    }
+    // const sendEmail = (serviceID, templateID, variables, userID) => {
+    //   emailjs.send(serviceID, templateID, variables, userID)
+    //     .then(() => {
+    //         setSuccessMessage("Form sent successfully! I'll contact you as soon as possible.");
+    //     }).catch(err => console.error(`Something went wrong ${err}`));
+    // }
 
     return (
       <div className="contacts" id="contactMe">
@@ -44,7 +44,7 @@ const ContactMe = () => {
           </div>
 
           <div className="container">
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form >
                 <div className="row">
                     <div className="col-md-6 col-xs-12">
                         <div className="text-center">

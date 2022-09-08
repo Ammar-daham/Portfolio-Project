@@ -6,7 +6,6 @@ import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
 import Education from "./components/Education";
 import MyProjects from "./components/MyProjects";
-import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
 
 function App() {
@@ -39,7 +38,7 @@ function App() {
    <AboutMe />
    <Education />
    <MyProjects />
-   <ContactMe />
+   
    <Footer />
    </>
   );
