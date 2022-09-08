@@ -1,6 +1,8 @@
 import React from "react";
 import MyFirstProject from "../myfirstproject.png";
 import Basaari from "../basaari.png";
+import Country from "../countryfavoritelist.png";
+
 //FONTAWESOME IMPORTS
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSearchPlus} from "@fortawesome/free-solid-svg-icons";
@@ -55,6 +57,29 @@ const MyProjects = () => {
 
     }
 
+    const openPopupboxCountry = () => {
+        const content = (
+        <>
+            <img className="image-popupbox" src={Country} alt="Favorite country list website React, TypeScript, Redux and Material UI"/>
+            <p></p>
+            <b>GitHub:</b><a href="so" className="hyper-link" onClick={() => window.open("https://github.com/Ammar-daham/fs12-frontend-project")}>https://github.com/Ammar-daham/fs12-frontend-project</a>
+            <br/>
+            <b>Demo:</b><a href="so" className="hyper-link" onClick={() => window.open("https://favorite-country-list.netlify.app/")}>https://favorite-country-list.netlify.app/</a>
+        </>
+        )
+        PopupboxManager.open({content})
+    }
+
+    const popupboxConfigCountry = {
+        titleBar: {
+            enable: true,
+            text: "Favorite country list website React, TypeScript, Redux and Material UI"
+        },
+        fadIn: true,
+        fadeInSpeed: 500
+
+    }
+
 
     return (
         <div className="myproject-wraper" id="myProjectWraper">
@@ -75,10 +100,17 @@ const MyProjects = () => {
                         <FontAwesomeIcon className="project-icon" icon= {faSearchPlus} />
                     </div>
 
+                    <div className="project-image-box" onClick={openPopupboxCountry}>
+                        <img className="my-project-image" src={Country} alt="Favorite country list website React, TypeScript, Redux and Material UI" />
+                        <div className="overflow"></div>
+                        <FontAwesomeIcon className="project-icon" icon= {faSearchPlus} />
+                    </div>
+
                 </div>
             </div>
             <PopupboxContainer {...popupboxConfigMyfirstproject}/>
             <PopupboxContainer {...popupboxConfigBasaari}/>
+            <PopupboxContainer {...popupboxConfigCountry}/>
         </div>
     )
 }
