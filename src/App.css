@@ -22,13 +22,14 @@ body{
 #content {
   justify-content: center;
   align-items: center;
-  padding-right: 10rem;
-  padding-left: 10rem;
+  padding-right: 5rem;
+  padding-left: 5rem;
 }
 
 .blog h2 {
   text-transform: uppercase;
   color: var(--primary-orange);
+  margin-top: 5rem;
 }
 
 /******************************* NAVBAR ***********************/
@@ -144,21 +145,6 @@ nav ul li{
   transition: .2s ease-in-out;
 }
 
-/******************** PARTICLES JS ***********************/
-.tsparticles-canvas-el{
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  z-index: 1;
-}
-
-
-@media(max-width: 600px) {
-  .particles-canvas {
-    display: none;
-  }
-}
-
 /********************* About me **************************/
 
 .photo-wrap {
@@ -166,7 +152,7 @@ nav ul li{
 }
 
 .profile-img {
-  margin-top: 3rem;
+  margin-top: 6rem;
  width: 50%;
  border-radius: 50%;
  padding: .2rem;
@@ -179,7 +165,8 @@ nav ul li{
 
 @media(max-width: 468px) {
   .profile-img {
-    width: 10rem;
+    width: 80%;
+    margin-top: 0rem;
   }
   
 }
@@ -287,28 +274,64 @@ nav ul li{
     padding-right: 2rem;
     padding-left: 2rem;
   }
+
+  .blog h2 {
+    text-transform: uppercase;
+    color: var(--primary-orange);
+    margin-top: 2rem;
+  }
 }
 
-/* SkillSet.module.css */
-
-.skillset {
-  margin-top: 20px;
+/******************************* Skills **************************/
+.progressBox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 0.5rem;
 }
 
-.skills {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.progressSubBox {
+  width: 100%;
+  position: relative;
+  margin-right: 0.5rem;
 }
 
-.skills h3 {
-  margin-top: 0;
+.linearProgress {
+  height: 20px;
+  background-color: grey.700;
 }
 
-.skills ul {
-  list-style-type: none;
-  padding-left: 0;
+
+/******************************* Footer **************************/
+.footer {
+  background-color: black;
+  padding: 8rem;
 }
 
-.skills li {
-  margin-bottom: 10px;
+.footer a {
+  text-decoration: none;
+  color: var(--primary-white);
+}
+
+.footer a:hover {
+  text-decoration: none;
+  color: var(--primary-orange);
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+
+@media(max-width: 468px) {
+  .footer {
+    padding: 3rem;
+  }
+
+  .add-email {
+    justify-content: center;
+  }
+
+  .footer-nav-bar {
+    text-align: center;
+  }
 }
