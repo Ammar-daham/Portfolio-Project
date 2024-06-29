@@ -32,7 +32,9 @@ function LinearProgressWithLabel({ targetValue, skill }) {
         <LinearProgress
           variant="determinate"
           value={progress}
-          sx={{ height: '20px', bgcolor: 'grey.700' }} 
+          sx={{ height: '20px', bgcolor: 'grey.700', '& .MuiLinearProgress-bar': {
+              backgroundColor: '#f9ab00',
+            },}}
 		  />
         <Typography
           variant="body2"

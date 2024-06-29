@@ -9,7 +9,7 @@
   --primary-hover-red: #f33501;
   --primary-hover-blue: #4a6a93;
   --primary-gray: #ccd1d9;
-  --primary-light-gray: #666666;
+  --primary-light-gray: #616161;
   --primary-dark-gray: #212529;
 }
 
@@ -140,7 +140,7 @@ nav ul li{
 
 .btn-main-offer:hover {
   text-decoration: none;
-  background-color: var(--primary-hover-blue);
+  background-color: var(--primary-orange);
   color: var(--primary-white);
   transition: .2s ease-in-out;
 }
@@ -153,7 +153,7 @@ nav ul li{
 
 .profile-img {
   margin-top: 6rem;
- width: 50%;
+ width: 60%;
  border-radius: 50%;
  padding: .2rem;
  border: 1px solid var(--primary-orange);
@@ -296,12 +296,6 @@ nav ul li{
   margin-right: 0.5rem;
 }
 
-.linearProgress {
-  height: 20px;
-  background-color: grey.700;
-}
-
-
 /******************************* Footer **************************/
 .footer {
   background-color: black;
@@ -334,4 +328,38 @@ nav ul li{
   .footer-nav-bar {
     text-align: center;
   }
+}
+
+/******************************* contacts **************************/
+.blog input, .blog textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--primary-light-gray);
+  resize: none;
+  border: 0;
+  border-radius: 0;
+  outline: 0 !important;
+  box-shadow: none !important;
+  top: 0;
+  margin-bottom: 1rem;
+  color: var(--primary-orange);
+}
+
+.blog .container {
+  padding: 4rem 0;
+}
+
+.blog input:focus, .blog textarea:focus {
+  background: var(--primary-light-gray);
+  color: var(--primary-orange);
+}
+
+.blog textarea {
+  height: 12.2rem !important;
+}
+
+.contact-btn {
+  margin: 1rem 0 0 0;
+  width: 100%;
+  background: none;
 }

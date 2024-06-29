@@ -7,6 +7,7 @@ import AboutMe from './components/AboutMe'
 import Education from './components/Education'
 import Skills from './components/Skills'
 import Footer from './components/Footer';
+import Contacts from './components/Contacts';
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 				<AboutMe />
 				<Education />
 				<Skills />
+				<Contacts />
 			</div>
 			<Footer />
 		</>

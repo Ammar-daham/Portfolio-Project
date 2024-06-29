@@ -52,8 +52,8 @@ const Footer = () => {
                   LinkedIn
                 </a>
                 <br />
-                <a href="" className="footer-nav">
-                  Skills
+                <a href="#contact" className="footer-nav">
+                  Contact me
                 </a>
               </div>
             </div>
