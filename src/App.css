@@ -88,6 +88,9 @@ nav ul li{
   background-size: cover;
   background-position: center;
   height: 90vh;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .main-info {
@@ -110,8 +113,12 @@ nav ul li{
   font-weight: bold;
 }
 
-
-
+#tsparticles {
+  position: absolute; 
+  z-index: 1;
+  width: 100vw;
+  height: 90vh;
+}
 
 /******************************* Typed-text ***********************/
 .typed-text {
