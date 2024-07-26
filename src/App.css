@@ -118,6 +118,7 @@ nav ul li{
   z-index: 1;
   width: 100vw;
   height: 90vh;
+  top: 8vh;
 }
 
 /******************************* Typed-text ***********************/
@@ -132,6 +133,15 @@ nav ul li{
   }
   .typed-text {
     font-size: 1.3rem;
+  }
+  
+  .header-wraper {
+    height: 80vh;
+  }
+
+  #tsparticles {
+    top: 6vh;
+    height: 80vh;
   }
 }
 /******************** Header main offer btn ***********************/
@@ -159,10 +169,10 @@ nav ul li{
 }
 
 .profile-img {
-  margin-top: 6rem;
- width: 60%;
+  margin-top: 4rem;
+ width: 50%;
  border-radius: 50%;
- padding: .2rem;
+ padding: .1rem;
  border: 1px solid var(--primary-orange);
 }
 

@@ -7,14 +7,32 @@ const Education = () => {
 				<h2>education</h2>
 			</div>
 			<div className="container education-wrapper">
+				<div className="timeline-block timeline-block-left">
+					<div className="marker"></div>
+					<div className="timeline-content">
+						<h3>2020-2024</h3>
+						<p>
+							Bachelor ICT degree from Metropolia university of applied sciences.
+							<br />
+							<span><b>Thesis: </b>Promotional tool for IGaming</span>
+							<br /> 
+							<span><b>Link: </b></span><a id="thesis_link" href="https://urn.fi/URN:NBN:fi:amk-202403255121" target="_blank">Free Spins give away</a>
+						</p>
+					</div>
+				</div>
 				<div className="timeline-block timeline-block-right">
 					<div className="marker"></div>
 					<div className="timeline-content">
-						<h3>2007-2011</h3>
-						<p className="para">
-							Bachelor degree from the college of education, department of computer science and manthmatics at the university of Mosul.
+						<h3>2022</h3>
+						<p>
+						Exchange program at Amsterdam University of Applied Sciences, focusing on Big Data and Machine Learning.
 							<br />
-							<span><b>Thesis: </b> Image processing using filters.</span>
+							<span><b>Projects: </b></span>
+							<ul>
+								<li>Sentiment analysis for hotel reviews.</li>
+								<li>Model to predict the wild fires in Australia</li>
+							</ul>
+							
 						</p>
 					</div>
 				</div>
@@ -35,29 +53,11 @@ const Education = () => {
 				<div className="timeline-block timeline-block-right">
 					<div className="marker"></div>
 					<div className="timeline-content">
-						<h3>2020-2024</h3>
-						<p>
-							Bachelor ICT degree from Metropolia university of applied sciences.
+						<h3>2007-2011</h3>
+						<p className="para">
+							Bachelor degree from the college of education, department of computer science and manthmatics at the university of Mosul.
 							<br />
-							<span><b>Thesis: </b>Promotional tool for IGaming</span>
-							<br /> 
-							<span><b>Link: </b></span><a id="thesis_link" href="https://urn.fi/URN:NBN:fi:amk-202403255121" target="_blank">Free Spins give away</a>
-						</p>
-					</div>
-				</div>
-				<div className="timeline-block timeline-block-left">
-					<div className="marker"></div>
-					<div className="timeline-content">
-						<h3>2022</h3>
-						<p>
-						Exchange program at Amsterdam University of Applied Sciences, focusing on Big Data and Machine Learning.
-							<br />
-							<span><b>Projects: </b></span>
-							<ul>
-								<li>Sentiment analysis for hotel reviews.</li>
-								<li>Model to predict the wild fires in Australia</li>
-							</ul>
-							
+							<span><b>Thesis: </b> Image processing using filters.</span>
 						</p>
 					</div>
 				</div>

@@ -5,6 +5,7 @@
   "dependencies": {
     "@babel/plugin-transform-class-properties": "^7.24.7",
     "@babel/plugin-transform-numeric-separator": "^7.24.7",
+    "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",

@@ -28,7 +28,7 @@ const Footer = () => {
               <p>aljewaryammar@gmail.com</p>
             </div>
           </div>
-          <div className="col-lg-2 col-md-3 col-sm-6" style={{marginBottom: "2rem"}}>
+          <div className="col-lg-3 col-md-3 col-sm-6" style={{marginBottom: "2rem"}}>
             <div className="row">
               <div className="col footer-nav-bar">
                 <a href="" className="footer-nav">
@@ -39,21 +39,28 @@ const Footer = () => {
                   About me
                 </a>
                 <br />
-                <a href="#education" className="footer-nav">
-                  Education
+                <a href="#experience" className="footer-nav">
+                  Experience
                 </a>
+                <br />
               </div>
               <div className="col footer-nav-bar">
                 <a href="#skills" className="footer-nav">
                   Skills
                 </a>
                 <br />
+                <a href="#education" className="footer-nav">
+                  Education
+                </a>
+                <br />
                 <a href="https://www.linkedin.com/in/ammar-daham/" className="footer-nav">
                   LinkedIn
                 </a>
                 <br />
+              </div>
+              <div className="col footer-nav-bar">
                 <a href="#contact" className="footer-nav">
-                  Contact me
+                  Contact
                 </a>
               </div>
             </div>

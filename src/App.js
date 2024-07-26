@@ -10,6 +10,8 @@ import AboutMe from './components/AboutMe';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
+import Contacts from './components/Contacts';
+import Experience from './components/Experience';
 
 function App() {
   const [init, setInit] = useState(false);
@@ -25,14 +27,6 @@ function App() {
 
   const options = useMemo(
 	() => ({
-	  interactivity: {
-		events: {
-		  onHover: {
-			enable: true,
-			mode: "repulse",
-		  },
-		},
-	  },
 	  particles: {
 		links: {
 		  color: "#ffffff",
@@ -83,8 +77,10 @@ function App() {
 	  <Header />
 	  <div className="container py-5" id="content">
 		<AboutMe />
-		<Education />
+		<Experience />
 		<Skills />
+		<Education />
+		<Contacts />
 	  </div>
 	  <Footer />
 	</>
