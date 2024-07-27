@@ -10,7 +10,7 @@ const Experience = () => {
 				<div className="timeline-block timeline-block-left">
 					<div className="marker"></div>
 					<div className="timeline-content">
-						<h3>JUN 2023 - PRESENT</h3>
+						<h5>JUN 2023 - PRESENT</h5>
 						<p>
 							Full-stack developer at Air dice Oy
 							<ul>
@@ -25,7 +25,7 @@ const Experience = () => {
 				<div className="timeline-block timeline-block-right">
 					<div className="marker"></div>
 					<div className="timeline-content">
-						<h3>AUG 2022 - JUN 2023</h3>
+						<h5>AUG 2022 - JUN 2023</h5>
 						<p>
 							Full-stack developer at Integrify
 							<ul>
@@ -42,7 +42,7 @@ const Experience = () => {
 				<div className="timeline-block timeline-block-left">
 					<div className="marker"></div>
 					<div className="timeline-content">
-						<h3>APR 2019 - JUN 2019</h3>
+						<h5>APR 2019 - JUN 2019</h5>
 						<p className="para">
 							IT helpdesk intern at Oodi Helsinki Central library
 							<ul>
@@ -56,9 +56,9 @@ const Experience = () => {
 				<div className="timeline-block timeline-block-right">
 					<div className="marker"></div>
 					<div className="timeline-content">
-						<h3>OCT 2011 - JUN 2014</h3>
+						<h5>OCT 2011 - JUN 2014</h5>
 						<p className="para">
-							ACCOUNTANT MANAGER Accountant manager at Iraq Oil
+							Accountant manager at Iraq Oil
 							<ul>
 								<li>Responsible for depositing money and accounting for several gas stations and oil storage depots.</li>
 								<li>Directly managed and was responsible for 25 station workers.</li>

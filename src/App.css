@@ -245,7 +245,7 @@ nav ul li{
   direction: ltr;
 }
 
-.timeline-content h3{
+.timeline-content h5{
   margin-top: 00.3125rem;
   color: var(--primary-orange);
   font-weight: 500;
