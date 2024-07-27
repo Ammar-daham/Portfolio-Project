@@ -1,5 +1,5 @@
 import React from 'react'
-import MyPhoto from '../myphoto.png'
+import MyPhoto from '../ammar.png'
 
 const AboutMe = () => {
   return (
@@ -17,7 +17,7 @@ const AboutMe = () => {
         </div>
         <div className="col-lg-6 col-xm-12">
           <h2>About me</h2>
-          <p class="para">
+          <p className="para">
             Hello! I am Ammar Daham, a software engineer with a diverse
             educational background and extensive experience in web and
             application development. I hold a Bachelor's degree in ICT from

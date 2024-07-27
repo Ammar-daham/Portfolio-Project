@@ -9,7 +9,7 @@
   --primary-hover-red: #f33501;
   --primary-hover-blue: #4a6a93;
   --primary-gray: #ccd1d9;
-  --primary-light-gray: #666666;
+  --primary-light-gray: #616161;
   --primary-dark-gray: #212529;
 }
 
@@ -22,13 +22,14 @@ body{
 #content {
   justify-content: center;
   align-items: center;
-  padding-right: 10rem;
-  padding-left: 10rem;
+  padding-right: 5rem;
+  padding-left: 5rem;
 }
 
 .blog h2 {
   text-transform: uppercase;
   color: var(--primary-orange);
+  margin-top: 5rem;
 }
 
 /******************************* NAVBAR ***********************/
@@ -87,6 +88,9 @@ nav ul li{
   background-size: cover;
   background-position: center;
   height: 90vh;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .main-info {
@@ -109,8 +113,13 @@ nav ul li{
   font-weight: bold;
 }
 
-
-
+#tsparticles {
+  position: absolute; 
+  z-index: 1;
+  width: 100vw;
+  height: 90vh;
+  top: 8vh;
+}
 
 /******************************* Typed-text ***********************/
 .typed-text {
@@ -124,6 +133,15 @@ nav ul li{
   }
   .typed-text {
     font-size: 1.3rem;
+  }
+  
+  .header-wraper {
+    height: 80vh;
+  }
+
+  #tsparticles {
+    top: 6vh;
+    height: 80vh;
   }
 }
 /******************** Header main offer btn ***********************/
@@ -139,24 +157,9 @@ nav ul li{
 
 .btn-main-offer:hover {
   text-decoration: none;
-  background-color: var(--primary-hover-blue);
+  background-color: var(--primary-orange);
   color: var(--primary-white);
   transition: .2s ease-in-out;
-}
-
-/******************** PARTICLES JS ***********************/
-.tsparticles-canvas-el{
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  z-index: 1;
-}
-
-
-@media(max-width: 600px) {
-  .particles-canvas {
-    display: none;
-  }
 }
 
 /********************* About me **************************/
@@ -166,10 +169,10 @@ nav ul li{
 }
 
 .profile-img {
-  margin-top: 3rem;
+  margin-top: 4rem;
  width: 50%;
  border-radius: 50%;
- padding: .2rem;
+ padding: .1rem;
  border: 1px solid var(--primary-orange);
 }
 
@@ -179,7 +182,8 @@ nav ul li{
 
 @media(max-width: 468px) {
   .profile-img {
-    width: 10rem;
+    width: 80%;
+    margin-top: 0rem;
   }
   
 }
@@ -241,9 +245,9 @@ nav ul li{
   direction: ltr;
 }
 
-.timeline-content h3{
+.timeline-content h5{
   margin-top: 00.3125rem;
-  color: var(--primary-hover-blue);
+  color: var(--primary-orange);
   font-weight: 500;
 }
 
@@ -287,28 +291,92 @@ nav ul li{
     padding-right: 2rem;
     padding-left: 2rem;
   }
+
+  .blog h2 {
+    text-transform: uppercase;
+    color: var(--primary-orange);
+    margin-top: 2rem;
+  }
 }
 
-/* SkillSet.module.css */
-
-.skillset {
-  margin-top: 20px;
+/******************************* Skills **************************/
+.progressBox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 0.5rem;
 }
 
-.skills {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.progressSubBox {
+  width: 100%;
+  position: relative;
+  margin-right: 0.5rem;
 }
 
-.skills h3 {
-  margin-top: 0;
+/******************************* Footer **************************/
+.footer {
+  background-color: black;
+  padding: 8rem;
 }
 
-.skills ul {
-  list-style-type: none;
-  padding-left: 0;
+.footer a {
+  text-decoration: none;
+  color: var(--primary-white);
 }
 
-.skills li {
-  margin-bottom: 10px;
+.footer a:hover {
+  text-decoration: none;
+  color: var(--primary-orange);
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+
+@media(max-width: 468px) {
+  .footer {
+    padding: 3rem;
+  }
+
+  .add-email {
+    justify-content: center;
+  }
+
+  .footer-nav-bar {
+    text-align: center;
+  }
+}
+
+/******************************* contacts **************************/
+.blog input, .blog textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--primary-light-gray);
+  resize: none;
+  border: 0;
+  border-radius: 0;
+  outline: 0 !important;
+  box-shadow: none !important;
+  top: 0;
+  margin-bottom: 1rem;
+  color: var(--primary-orange);
+}
+
+.blog .container {
+  padding: 4rem 0;
+}
+
+.blog input:focus, .blog textarea:focus {
+  background: var(--primary-light-gray);
+  color: var(--primary-orange);
+}
+
+.blog textarea {
+  height: 12.2rem !important;
+}
+
+.contact-btn {
+  margin: 1rem 0 0 0;
+  width: 100%;
+  background: none;
 }

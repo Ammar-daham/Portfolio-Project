@@ -1,0 +1,40 @@
+{
+    "frontendSkills": [
+      { "skill": "JavaScript", "progress": 90 },
+      { "skill": "TypeScript", "progress": 70 },
+      { "skill": "ReactJs", "progress": 80 },
+      { "skill": "React Native", "progress": 80 },
+      { "skill": "VueJs", "progress": 80 },
+      { "skill": "FreeMarker Template skill", "progress": 70 },
+      { "skill": "HTML5", "progress": 90 },
+      { "skill": "CSS", "progress": 90 },
+      { "skill": "Material UI", "progress": 100 },
+      { "skill": "Bootstrap", "progress": 100 }
+    ],
+    "backendSkills": [
+      { "skill": "Java", "progress": 90 },
+      { "skill": "Python", "progress": 50 },
+      { "skill": "Node.js", "progress": 90 },
+      { "skill": "Express", "progress": 90 },
+      { "skill": "C++", "progress": 50 },
+      { "skill": "REST API", "progress": 100 }
+    ],
+    "databaseSkills": [
+      { "skill": "SQL", "progress": 80 },
+      { "skill": "PostgreSQL", "progress": 80 },
+      { "skill": "MongoDB", "progress": 80 }
+    ],
+    "devopsSkills": [
+      { "skill": "Docker", "progress": 60 },
+      { "skill": "CI/CD", "progress": 70 }
+    ],
+    "otherSkills": [
+      { "skill": "Linux", "progress": 90 },
+      { "skill": "Git", "progress": 90 },
+      { "skill": "Agile Methodologies", "progress": 70 },
+      { "skill": "Scrum", "progress": 80 },
+      { "skill": "UML", "progress": 70 },
+      { "skill": "Jira", "progress": 100 }
+    ]
+  }
+  
