@@ -10,7 +10,6 @@ import AboutMe from './components/AboutMe';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
-import Contacts from './components/Contacts';
 import Experience from './components/Experience';
 
 function App() {
@@ -80,7 +79,6 @@ function App() {
 		<Experience />
 		<Skills />
 		<Education />
-		<Contacts />
 	  </div>
 	  <Footer />
 	</>

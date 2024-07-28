@@ -58,11 +58,6 @@ const Footer = () => {
                 </a>
                 <br />
               </div>
-              <div className="col footer-nav-bar">
-                <a href="#contact" className="footer-nav">
-                  Contact
-                </a>
-              </div>
             </div>
           </div>
           <div className="col-lg-5 col-md-5 col-sm-6 align-items-center" >

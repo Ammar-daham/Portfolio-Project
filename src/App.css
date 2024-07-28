@@ -37,16 +37,7 @@ nav {
   z-index: 2;
 }
 
-.logo {
-  width: 6rem;
-}
-
-
 /******************************* MENU LINKS ********************/
-nav a.nav-link {
-  letter-spacing: 0.038;
-  cursor: pointer;
-}
 
 nav ul li{
   text-transform: uppercase;
@@ -59,24 +50,19 @@ nav ul li{
   border-top: 0.1875rem solid var(--primary-dark);
 }
 
-.navbar-brand {
-  max-width: 17.25rem;
-  padding: 0 !important;
-  height: 6rem !important;
-}
-
-@media(max-width: 768px) { 
-  .navbar-brand {
-    width: 7rem;
-  }
-}
-
 .navbar-nav > li > a.active, .navbar-nav > li > a.active:focus {
   border-top: 0.1875rem solid var(--primary-orange);
 }
 
 .navbar-nav > li > a:hover {
   border-top: 0.1875rem solid var(--primary-orange);
+}
+
+@media(max-width: 768px) { 
+  .socialM {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 
