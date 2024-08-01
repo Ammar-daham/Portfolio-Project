@@ -31,7 +31,7 @@ const Footer = () => {
           <div className="col-lg-3 col-md-3 col-sm-6" style={{marginBottom: "2rem"}}>
             <div className="row">
               <div className="col footer-nav-bar">
-                <a href="" className="footer-nav">
+                <a href="#header" className="footer-nav">
                   Home
                 </a>
                 <br />
