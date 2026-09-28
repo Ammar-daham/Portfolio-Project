@@ -8,10 +8,6 @@ function LinearProgressWithLabel({ targetValue, skill }) {
   const [progress, setProgress] = React.useState(0)
 
   React.useEffect(() => {
-    setProgress(0) // Reset progress on component mount
-  }, [targetValue])
-
-  React.useEffect(() => {
     if (progress < targetValue) {
       const timer = setInterval(() => {
         setProgress((prevProgress) => {
@@ -76,7 +72,7 @@ const SkillSection = ({ title, skills }) => (
   </div>
 )
 
-const Skills = ({ trigger }) => {
+const Skills = () => {
   return (
     <div className="blog" id="skills">
       <div className="d-flex justify-content-center">

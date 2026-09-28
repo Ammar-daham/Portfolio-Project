@@ -1,4 +1,3 @@
-import React from 'react'
 import { useEffect, useMemo, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Particles, { initParticlesEngine } from '@tsparticles/react'
@@ -68,11 +67,13 @@ function App() {
 
   return (
     <>
-      <Particles
-        id="tsparticles"
-        className="particles-canvas"
-        options={options}
-      />
+      {init && (
+        <Particles
+          id="tsparticles"
+          className="particles-canvas"
+          options={options}
+        />
+      )}
       <Navbar />
       <Header />
       <div className="container py-5" id="content">

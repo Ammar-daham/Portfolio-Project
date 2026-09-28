@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Education = () => {
   return (
     <div className="blog" id="education">
@@ -26,6 +24,7 @@ const Education = () => {
                 id="thesis_link"
                 href="https://urn.fi/URN:NBN:fi:amk-202403255121"
                 target="_blank"
+                rel="noreferrer"
               >
                 Free Spins give away
               </a>

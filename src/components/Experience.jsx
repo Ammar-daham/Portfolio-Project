@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Experience = () => {
   return (
     <div className="blog" id="experience">
@@ -14,7 +12,7 @@ const Experience = () => {
             <p>
               Full-stack developer at Air dice Oy
               <ul>
-                <li>Monitoring and tracking tool's maintenance.</li>
+                <li>Monitoring and tracking tool&apos;s maintenance.</li>
                 <li>
                   Preparing and deploying new games to the staging environment.
                 </li>

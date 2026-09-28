@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 
 const Contacts = () => {
@@ -68,7 +68,9 @@ const Contacts = () => {
     <div className="blog" id="contact">
       <div className="text-center">
         <h2>Contact me</h2>
-        <p>Please fill out the form and I'll contact you as soon as possible</p>
+        <p>
+          Please fill out the form and I&apos;ll contact you as soon as possible
+        </p>
       </div>
       <div className="container">
         <form ref={form} onSubmit={sendEmail} noValidate>

@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   LinkedinShareButton,
   LinkedinIcon,
@@ -37,7 +36,7 @@ const Footer = () => {
           >
             <div className="row">
               <div className="col footer-nav-bar">
-                <a href="" className="footer-nav">
+                <a href="#header" className="footer-nav">
                   Home
                 </a>
                 <br />
