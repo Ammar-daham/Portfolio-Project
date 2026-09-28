@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
-
 :root {
   --primary-white: #ffffff;
-  --primary-orange: #f9ab00; 
-  --primary-dark: rgba(255,255,255,0);
+  --primary-orange: #f9ab00;
+  --primary-dark: rgba(255, 255, 255, 0);
   --primary-red: #ef4035;
   --primary-hover-red: #f33501;
   --primary-hover-blue: #4a6a93;
@@ -13,8 +12,10 @@
   --primary-dark-gray: #212529;
 }
 
-body{
-  font-family: 'Roboto Condensed', sans-serif I !important;
+body {
+  font-family:
+    'Roboto Condensed',
+    sans-serif I !important;
   background-color: var(--primary-dark-gray);
   color: var(--primary-white) !important;
 }
@@ -41,13 +42,12 @@ nav {
   width: 6rem;
 }
 
-
 /******************************* MENU LINKS ********************/
 nav a.nav-link {
   cursor: pointer;
 }
 
-nav ul li{
+nav ul li {
   text-transform: uppercase;
 }
 
@@ -64,20 +64,20 @@ nav ul li{
   height: 6rem !important;
 }
 
-@media(max-width: 768px) { 
+@media (max-width: 768px) {
   .navbar-brand {
     width: 7rem;
   }
 }
 
-.navbar-nav > li > a.active, .navbar-nav > li > a.active:focus {
+.navbar-nav > li > a.active,
+.navbar-nav > li > a.active:focus {
   border-top: 0.1875rem solid var(--primary-orange);
 }
 
 .navbar-nav > li > a:hover {
   border-top: 0.1875rem solid var(--primary-orange);
 }
-
 
 /******************************* Header ***********************/
 
@@ -113,7 +113,7 @@ nav ul li{
 }
 
 #tsparticles {
-  position: absolute; 
+  position: absolute;
   z-index: 1;
   width: 100vw;
   height: 90vh;
@@ -122,18 +122,18 @@ nav ul li{
 
 /******************************* Typed-text ***********************/
 .typed-text {
-  font-size: 2rem; 
+  font-size: 2rem;
   color: var(--primary-white);
 }
 
-@media(max-width: 768px) { 
-  .main-info h1 { 
+@media (max-width: 768px) {
+  .main-info h1 {
     font-size: 1.7rem !important;
   }
   .typed-text {
     font-size: 1.3rem;
   }
-  
+
   .header-wraper {
     height: 80vh;
   }
@@ -158,7 +158,7 @@ nav ul li{
   text-decoration: none;
   background-color: var(--primary-orange);
   color: var(--primary-white);
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 /********************* About me **************************/
@@ -169,24 +169,22 @@ nav ul li{
 
 .profile-img {
   margin-top: 4rem;
- width: 50%;
- border-radius: 50%;
- padding: .1rem;
- border: 1px solid var(--primary-orange);
+  width: 50%;
+  border-radius: 50%;
+  padding: 0.1rem;
+  border: 1px solid var(--primary-orange);
 }
 
 .para {
   text-align: justify;
 }
 
-@media(max-width: 468px) {
+@media (max-width: 468px) {
   .profile-img {
     width: 80%;
     margin-top: 0rem;
   }
-  
 }
-
 
 /******************************* EDUCTAION ********************/
 .education {
@@ -201,7 +199,7 @@ nav ul li{
 
 .education-wrapper::before {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: 50%;
   margin-left: -0.0625rem;
@@ -244,7 +242,7 @@ nav ul li{
   direction: ltr;
 }
 
-.timeline-content h5{
+.timeline-content h5 {
   margin-top: 00.3125rem;
   color: var(--primary-orange);
   font-weight: 500;
@@ -255,13 +253,12 @@ nav ul li{
   color: var(--primary-orange);
 }
 
-@media(max-width: 600px) {
-
-  .education .container{
+@media (max-width: 600px) {
+  .education .container {
     padding-left: 0;
   }
   .education-wrapper::before {
-    left:0.5rem;
+    left: 0.5rem;
     margin-bottom: 1.875rem;
   }
   .timeline-block-right {
@@ -332,7 +329,7 @@ nav ul li{
   margin-bottom: 0;
 }
 
-@media(max-width: 468px) {
+@media (max-width: 468px) {
   .footer {
     padding: 3rem;
   }
@@ -347,7 +344,8 @@ nav ul li{
 }
 
 /******************************* contacts **************************/
-.blog input, .blog textarea {
+.blog input,
+.blog textarea {
   width: 100%;
   box-sizing: border-box;
   background: var(--primary-light-gray);
@@ -365,7 +363,8 @@ nav ul li{
   padding: 4rem 0;
 }
 
-.blog input:focus, .blog textarea:focus {
+.blog input:focus,
+.blog textarea:focus {
   background: var(--primary-light-gray);
   color: var(--primary-orange);
 }

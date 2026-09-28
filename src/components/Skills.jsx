@@ -28,14 +28,18 @@ function LinearProgressWithLabel({ targetValue, skill }) {
 
   return (
     <Box className="progressBox">
-      <Box  className="progressSubBox">
+      <Box className="progressSubBox">
         <LinearProgress
           variant="determinate"
           value={progress}
-          sx={{ height: '20px', bgcolor: 'grey.700', '& .MuiLinearProgress-bar': {
+          sx={{
+            height: '20px',
+            bgcolor: 'grey.700',
+            '& .MuiLinearProgress-bar': {
               backgroundColor: '#f9ab00',
-            },}}
-		  />
+            },
+          }}
+        />
         <Typography
           variant="body2"
           sx={{
