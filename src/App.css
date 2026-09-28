@@ -44,7 +44,6 @@ nav {
 
 /******************************* MENU LINKS ********************/
 nav a.nav-link {
-  letter-spacing: 0.038;
   cursor: pointer;
 }
 
