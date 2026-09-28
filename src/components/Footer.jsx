@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   LinkedinShareButton,
   LinkedinIcon,
@@ -17,7 +16,10 @@ const Footer = () => {
     <div className="footer">
       <div className="container">
         <div className="row">
-          <div className="col-lg-4 col-md-6 col-sm-6" style={{marginBottom: "2rem"}}>
+          <div
+            className="col-lg-4 col-md-6 col-sm-6"
+            style={{ marginBottom: '2rem' }}
+          >
             <div className="d-flex add-email">
               <p>City Helsinki</p>
             </div>
@@ -28,10 +30,13 @@ const Footer = () => {
               <p>aljewaryammar@gmail.com</p>
             </div>
           </div>
-          <div className="col-lg-3 col-md-3 col-sm-6" style={{marginBottom: "2rem"}}>
+          <div
+            className="col-lg-3 col-md-3 col-sm-6"
+            style={{ marginBottom: '2rem' }}
+          >
             <div className="row">
               <div className="col footer-nav-bar">
-                <a href="" className="footer-nav">
+                <a href="#header" className="footer-nav">
                   Home
                 </a>
                 <br />
@@ -53,7 +58,10 @@ const Footer = () => {
                   Education
                 </a>
                 <br />
-                <a href="https://www.linkedin.com/in/ammar-daham/" className="footer-nav">
+                <a
+                  href="https://www.linkedin.com/in/ammar-daham/"
+                  className="footer-nav"
+                >
                   LinkedIn
                 </a>
                 <br />
@@ -65,7 +73,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-5 col-md-5 col-sm-6 align-items-center" >
+          <div className="col-lg-5 col-md-5 col-sm-6 align-items-center">
             <div className="d-flex justify-content-center">
               <p>Share github on: </p>
             </div>

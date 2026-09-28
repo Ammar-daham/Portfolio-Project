@@ -1,47 +1,47 @@
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 const Contacts = () => {
-  const form = useRef(); // Define useRef for the form
-  const [errors, setErrors] = useState({});
-  const [success, setSuccess] = useState(false); // Success state
+  const form = useRef() // Define useRef for the form
+  const [errors, setErrors] = useState({})
+  const [success, setSuccess] = useState(false) // Success state
 
-  const serviceID = 'service_ID_ammar';
-  const templateID = 'template_ID';
-  const userID = 'B0Q-gtarwkqZhDpXo';
+  const serviceID = 'service_ID_ammar'
+  const templateID = 'template_ID'
+  const userID = 'B0Q-gtarwkqZhDpXo'
 
   const validateForm = () => {
-    const formErrors = {};
-    const formElements = form.current.elements;
+    const formErrors = {}
+    const formElements = form.current.elements
 
     if (!formElements.name.value.trim()) {
-      formErrors.name = 'Name is required';
+      formErrors.name = 'Name is required'
     }
 
     if (!formElements.phone.value.trim()) {
-      formErrors.phone = 'Phone number is required';
+      formErrors.phone = 'Phone number is required'
     }
 
     if (!formElements.email.value.trim()) {
-      formErrors.email = 'Email is required';
+      formErrors.email = 'Email is required'
     } else if (!/\S+@\S+\.\S+/.test(formElements.email.value)) {
-      formErrors.email = 'Email address is invalid';
+      formErrors.email = 'Email address is invalid'
     }
 
     if (!formElements.subject.value.trim()) {
-      formErrors.subject = 'Subject is required';
+      formErrors.subject = 'Subject is required'
     }
 
     if (!formElements.description.value.trim()) {
-      formErrors.description = 'Description is required';
+      formErrors.description = 'Description is required'
     }
 
-    return formErrors;
-  };
+    return formErrors
+  }
 
   const sendEmail = (e) => {
-    e.preventDefault();
-    const formErrors = validateForm();
+    e.preventDefault()
+    const formErrors = validateForm()
 
     if (Object.keys(formErrors).length === 0) {
       emailjs
@@ -50,25 +50,27 @@ const Contacts = () => {
         })
         .then(
           () => {
-            setSuccess(true); // Set success to true when email is sent
-            setErrors({}); // Clear errors
-            form.current.reset(); // Reset the form
+            setSuccess(true) // Set success to true when email is sent
+            setErrors({}) // Clear errors
+            form.current.reset() // Reset the form
           },
           (error) => {
-            console.log('FAILED...', error.text);
+            console.log('FAILED...', error.text)
           },
-        );
+        )
     } else {
-      setErrors(formErrors);
-      setSuccess(false); // Set success to false if there are errors
+      setErrors(formErrors)
+      setSuccess(false) // Set success to false if there are errors
     }
-  };
+  }
 
   return (
     <div className="blog" id="contact">
       <div className="text-center">
         <h2>Contact me</h2>
-        <p>Please fill out the form and I'll contact you as soon as possible</p>
+        <p>
+          Please fill out the form and I&apos;ll contact you as soon as possible
+        </p>
       </div>
       <div className="container">
         <form ref={form} onSubmit={sendEmail} noValidate>
@@ -80,7 +82,9 @@ const Contacts = () => {
           <div className="row">
             <div className="col-md-6 col-xs-12">
               <div className="form-group">
-                {errors.name && <small className="form-text text-danger">{errors.name}</small>}
+                {errors.name && (
+                  <small className="form-text text-danger">{errors.name}</small>
+                )}
                 <input
                   id="name"
                   type="text"
@@ -91,7 +95,11 @@ const Contacts = () => {
                 />
               </div>
               <div className="form-group">
-                {errors.phone && <small className="form-text text-danger">{errors.phone}</small>}
+                {errors.phone && (
+                  <small className="form-text text-danger">
+                    {errors.phone}
+                  </small>
+                )}
                 <input
                   id="phone"
                   type="text"
@@ -102,7 +110,11 @@ const Contacts = () => {
                 />
               </div>
               <div className="form-group">
-                {errors.email && <small className="form-text text-danger">{errors.email}</small>}
+                {errors.email && (
+                  <small className="form-text text-danger">
+                    {errors.email}
+                  </small>
+                )}
                 <input
                   id="email"
                   type="email"
@@ -113,7 +125,11 @@ const Contacts = () => {
                 />
               </div>
               <div className="form-group">
-                {errors.subject && <small className="form-text text-danger">{errors.subject}</small>}
+                {errors.subject && (
+                  <small className="form-text text-danger">
+                    {errors.subject}
+                  </small>
+                )}
                 <input
                   id="subject"
                   type="text"
@@ -126,7 +142,11 @@ const Contacts = () => {
             </div>
             <div className="col-md-6 col-xs-12">
               <div className="form-group">
-                {errors.description && <small className="form-text text-danger">{errors.description}</small>}
+                {errors.description && (
+                  <small className="form-text text-danger">
+                    {errors.description}
+                  </small>
+                )}
                 <textarea
                   id="description"
                   className="form-control"
@@ -143,7 +163,7 @@ const Contacts = () => {
         </form>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contacts;
+export default Contacts

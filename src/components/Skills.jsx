@@ -8,10 +8,6 @@ function LinearProgressWithLabel({ targetValue, skill }) {
   const [progress, setProgress] = React.useState(0)
 
   React.useEffect(() => {
-    setProgress(0) // Reset progress on component mount
-  }, [targetValue])
-
-  React.useEffect(() => {
     if (progress < targetValue) {
       const timer = setInterval(() => {
         setProgress((prevProgress) => {
@@ -28,14 +24,18 @@ function LinearProgressWithLabel({ targetValue, skill }) {
 
   return (
     <Box className="progressBox">
-      <Box  className="progressSubBox">
+      <Box className="progressSubBox">
         <LinearProgress
           variant="determinate"
           value={progress}
-          sx={{ height: '20px', bgcolor: 'grey.700', '& .MuiLinearProgress-bar': {
+          sx={{
+            height: '20px',
+            bgcolor: 'grey.700',
+            '& .MuiLinearProgress-bar': {
               backgroundColor: '#f9ab00',
-            },}}
-		  />
+            },
+          }}
+        />
         <Typography
           variant="body2"
           sx={{
@@ -72,7 +72,7 @@ const SkillSection = ({ title, skills }) => (
   </div>
 )
 
-const Skills = ({ trigger }) => {
+const Skills = () => {
   return (
     <div className="blog" id="skills">
       <div className="d-flex justify-content-center">
