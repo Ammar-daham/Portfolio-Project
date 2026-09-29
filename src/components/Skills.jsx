@@ -1,94 +1,35 @@
-import * as React from 'react'
-import LinearProgress from '@mui/material/LinearProgress'
-import Typography from '@mui/material/Typography'
-import Box from '@mui/material/Box'
 import { skillGroups } from '../data/skills'
+import Card from './ui/Card'
+import Section from './ui/Section'
+import { Tag, TagList } from './ui/Tag'
+import styles from './Skills.module.css'
 
-function LinearProgressWithLabel({ targetValue, skill }) {
-  const [progress, setProgress] = React.useState(0)
+// Everyday (core) skills first, otherwise in the data's order
+const coreFirst = (skills) =>
+  [...skills].sort((a, b) => Number(Boolean(b.core)) - Number(Boolean(a.core)))
 
-  React.useEffect(() => {
-    if (progress < targetValue) {
-      const timer = setInterval(() => {
-        setProgress((prevProgress) => {
-          const newProgress = Math.min(prevProgress + 1, targetValue)
-          return newProgress
-        })
-      }, 30)
-
-      return () => {
-        clearInterval(timer)
-      }
-    }
-  }, [progress, targetValue])
-
-  return (
-    <Box className="progressBox">
-      <Box className="progressSubBox">
-        <LinearProgress
-          variant="determinate"
-          value={progress}
-          sx={{
-            height: '20px',
-            bgcolor: 'grey.700',
-            '& .MuiLinearProgress-bar': {
-              backgroundColor: '#f9ab00',
-            },
-          }}
-        />
-        <Typography
-          variant="body2"
-          sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            whiteSpace: 'nowrap',
-          }}
-        >
-          {skill}
-        </Typography>
-      </Box>
-      <Box sx={{ minWidth: 35 }}>
-        <Typography variant="body2" color="white">{`${Math.round(
-          progress,
-        )}%`}</Typography>
-      </Box>
-    </Box>
-  )
-}
-
-const SkillSection = ({ title, skills }) => (
-  <div className="skill">
-    <h5>{title}</h5>
-    {skills.map((skillData, index) => (
-      <Box key={index}>
-        <LinearProgressWithLabel
-          targetValue={skillData.progress}
-          skill={skillData.skill}
-        />
-      </Box>
-    ))}
-  </div>
-)
-
-const Skills = () => {
-  return (
-    <div className="blog" id="skills">
-      <div className="d-flex justify-content-center">
-        <h2>Skills</h2>
-      </div>
-      <Box sx={{ width: '100%' }}>
-        {skillGroups.map((group) => (
-          <SkillSection
-            key={group.title}
-            title={group.title}
-            skills={group.skills}
-          />
-        ))}
-      </Box>
+const Skills = () => (
+  <Section
+    id="skills"
+    eyebrow="// 03 — toolbox"
+    title="Skills"
+    sub="Highlighted skills are the ones I use every day."
+  >
+    <div className={styles.grid}>
+      {skillGroups.map((group) => (
+        <Card key={group.title} padded>
+          <h3 className={styles.group}>{group.title}</h3>
+          <TagList label={`${group.title} skills`}>
+            {coreFirst(group.skills).map((skill) => (
+              <Tag key={skill.name} size="md" core={skill.core}>
+                {skill.name}
+              </Tag>
+            ))}
+          </TagList>
+        </Card>
+      ))}
     </div>
-  )
-}
+  </Section>
+)
 
 export default Skills

@@ -149,20 +149,6 @@ body {
   }
 }
 
-/******************************* Skills **************************/
-.progressBox {
-  display: flex;
-  align-items: center;
-  position: relative;
-  margin-bottom: 0.5rem;
-}
-
-.progressSubBox {
-  width: 100%;
-  position: relative;
-  margin-right: 0.5rem;
-}
-
 /******************************* Footer **************************/
 .footer {
   background-color: black;
