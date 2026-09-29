@@ -40,7 +40,7 @@ const Hero = () => {
           </h1>
           <p className={styles.lead}>{hero.lead}</p>
           <div className={styles.ctas}>
-            <Button href="#experience">
+            <Button href="#projects">
               View my work <Icon name="arrow-right" />
             </Button>
             <Button variant="ghost" href="#contact">

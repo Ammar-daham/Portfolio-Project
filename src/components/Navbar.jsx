@@ -8,6 +8,7 @@ import styles from './Navbar.module.css'
 
 const LINKS = [
   { id: 'header', label: 'Home' },
+  { id: 'projects', label: 'Projects' },
   { id: 'experience', label: 'Experience' },
   { id: 'skills', label: 'Skills' },
   { id: 'education', label: 'Education' },
