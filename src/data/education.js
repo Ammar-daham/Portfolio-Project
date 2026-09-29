@@ -1,37 +1,48 @@
 export const education = [
   {
-    period: '2020-2024',
-    summary:
-      'Bachelor of Engineering in Information Technology, Metropolia University of Applied Sciences.',
+    start: '2020',
+    end: '2024',
+    title: 'Bachelor of Engineering in Information Technology',
+    school: 'Metropolia University of Applied Sciences',
     thesis: 'Promotional tool for iGaming',
     link: {
-      label: 'Free Spins giveaway',
+      label: 'Read the thesis',
+      title: 'Free Spins giveaway',
       href: 'https://urn.fi/URN:NBN:fi:amk-202403255121',
     },
   },
   {
-    period: '2022',
-    summary:
-      'Exchange at Amsterdam University of Applied Sciences, focusing on big data and machine learning.',
+    start: '2022',
+    end: '2022',
+    title: 'Exchange in big data and machine learning',
+    school: 'Amsterdam University of Applied Sciences',
     projects: [
-      'Sentiment analysis of hotel reviews.',
-      'A model that predicts wildfires in Australia.',
+      'Sentiment analysis of hotel reviews',
+      'A model that predicts wildfires in Australia',
     ],
   },
   {
-    period: '2018-2020',
-    summary:
-      'Vocational qualification in Information and Communications Technology, Omnia Vocational School.',
-    highlights: [
-      'Built two online-shop websites with React and WordPress as school projects.',
-      'Certificate of privacy education, 17.03.2019.',
-      'Certified ScrumMaster® (CSM®), 26.12.2019.',
-    ],
+    start: '2018',
+    end: '2020',
+    title:
+      'Vocational qualification in Information and Communications Technology',
+    school: 'Omnia Vocational School',
+    projects: ['Two online-shop websites, built with React and WordPress'],
   },
   {
-    period: '2007-2011',
-    summary:
-      'Bachelor of Science in Computers and Mathematics, College of Education, University of Mosul.',
-    thesis: 'Image processing using filters.',
+    start: '2007',
+    end: '2011',
+    title: 'Bachelor of Science in Computers and Mathematics',
+    school: 'University of Mosul, College of Education',
+    thesis: 'Image processing using filters',
   },
+]
+
+export const certifications = [
+  {
+    name: 'Certified ScrumMaster® (CSM®)',
+    issuer: 'Scrum Alliance',
+    date: '2019-12-26',
+  },
+  { name: 'Certificate of privacy education', date: '2019-03-17' },
 ]

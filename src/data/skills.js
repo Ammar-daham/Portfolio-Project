@@ -22,7 +22,7 @@ export const skillGroups = [
       { name: 'Sass' },
       { name: 'Tailwind CSS' },
       { name: 'Material UI' },
-      { name: 'Bootstrap', true },
+      { name: 'Bootstrap', core: true },
     ],
   },
   {
@@ -57,7 +57,7 @@ export const skillGroups = [
       { name: 'Agile / Scrum (CSM®)', core: true },
       { name: 'Jira', core: true },
       { name: 'UML' },
-      { name: 'AI assistants (Copilot, ChatGPT and Claude Code)', core: true },
+      { name: 'LLM (Copilot, ChatGPT, Claude Code)', core: true },
     ],
   },
 ]
