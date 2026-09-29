@@ -1,65 +1,11 @@
 :root {
   --primary-white: #ffffff;
   --primary-orange: #f9ab00;
-  --primary-dark: rgba(255, 255, 255, 0);
-  --primary-red: #ef4035;
-  --primary-hover-red: #f33501;
-  --primary-hover-blue: #4a6a93;
-  --primary-gray: #ccd1d9;
-  --primary-light-gray: #616161;
-  --primary-dark-gray: #212529;
 }
 
 body {
   background-color: var(--color-bg);
   color: var(--primary-white) !important;
-}
-
-#content {
-  justify-content: center;
-  align-items: center;
-  padding-right: 5rem;
-  padding-left: 5rem;
-}
-
-.blog h2 {
-  text-transform: uppercase;
-  color: var(--primary-orange);
-  margin-top: 5rem;
-}
-
-/******************** Contact button ***********************/
-.btn-main-offer {
-  text-decoration: none;
-  border: 1px solid var(--primary-orange);
-  text-transform: uppercase;
-  border-radius: 0;
-  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
-  margin: 2rem;
-  color: var(--primary-white);
-}
-
-.btn-main-offer:hover {
-  text-decoration: none;
-  background-color: var(--primary-orange);
-  color: var(--primary-white);
-  transition: 0.2s ease-in-out;
-}
-
-/* Kept for the contact section, the last one still inside #content */
-@media (max-width: 600px) {
-  #content {
-    justify-content: center;
-    align-items: center;
-    padding-right: 2rem;
-    padding-left: 2rem;
-  }
-
-  .blog h2 {
-    text-transform: uppercase;
-    color: var(--primary-orange);
-    margin-top: 2rem;
-  }
 }
 
 /******************************* Footer **************************/
@@ -94,40 +40,4 @@ body {
   .footer-nav-bar {
     text-align: center;
   }
-}
-
-/******************************* contacts **************************/
-.blog input,
-.blog textarea {
-  width: 100%;
-  box-sizing: border-box;
-  background: var(--primary-light-gray);
-  resize: none;
-  border: 0;
-  border-radius: 0;
-  outline: 0 !important;
-  box-shadow: none !important;
-  top: 0;
-  margin-bottom: 1rem;
-  color: var(--primary-orange);
-}
-
-.blog .container {
-  padding: 4rem 0;
-}
-
-.blog input:focus,
-.blog textarea:focus {
-  background: var(--primary-light-gray);
-  color: var(--primary-orange);
-}
-
-.blog textarea {
-  height: 12.2rem !important;
-}
-
-.contact-btn {
-  margin: 1rem 0 0 0;
-  width: 100%;
-  background: none;
 }

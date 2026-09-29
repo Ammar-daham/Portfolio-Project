@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
-import Contacts from './components/Contacts'
+import Contact from './components/Contact'
 import Education from './components/Education'
 import Experience from './components/Experience'
 import Footer from './components/Footer'
@@ -18,9 +18,7 @@ function App() {
       <Experience />
       <Skills />
       <Education />
-      <div className="container py-5" id="content">
-        <Contacts />
-      </div>
+      <Contact />
       <Footer />
     </>
   )

@@ -42,3 +42,21 @@
     margin-bottom: var(--space-8);
   }
 }
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.split .sub {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .split {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-8);
+  }
+}
