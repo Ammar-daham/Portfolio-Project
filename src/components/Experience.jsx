@@ -10,7 +10,7 @@ const Experience = () => {
           <div className="timeline-content">
             <h5>JUN 2023 - PRESENT</h5>
             <p>
-              Full-stack Developer at Air Dice Oy
+              Full-stack Engineer at Air Dice Oy
               <ul>
                 <li>
                   Build and maintain internal tools, including the monitoring,
