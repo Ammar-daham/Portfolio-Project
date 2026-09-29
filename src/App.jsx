@@ -16,8 +16,8 @@ function App() {
       <Hero />
       <Projects />
       <Experience />
+      <Skills />
       <div className="container py-5" id="content">
-        <Skills />
         <Education />
         <Contacts />
       </div>
