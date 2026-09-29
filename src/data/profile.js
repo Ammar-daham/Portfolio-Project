@@ -7,13 +7,15 @@ export const profile = {
     github: 'https://github.com/Ammar-daham/',
     linkedin: 'https://www.linkedin.com/in/ammar-daham/',
   },
+  role: 'Full-stack Engineer',
+  fullStackSince: '2022-08',
   hero: {
-    heading: "Hi, I'm Ammar Daham",
-    taglines: [
-      'Full-stack developer',
-      'React · Node.js · Java',
-      'Helsinki, Finland',
-    ],
+    greeting: "Hi, I'm Ammar Daham.",
+    headline: {
+      before: 'I build',
+      emphasis: 'web tools',
+      after: 'people actually use.',
+    },
+    lead: 'Full-stack engineer at Air Dice Oy. I build tools for other teams with JavaScript, TypeScript and Java, and give them the support they need.',
   },
-  bio: "I'm Ammar Daham, a full-stack engineer in Helsinki who builds with JavaScript, TypeScript and Java. At Air Dice Oy I build tools for other teams and give them the support they need. My earlier work as a manager taught me to take responsibility and drive projects forward, and as a team player I enjoy collaborating and sharing the work to reach our goals.",
 }

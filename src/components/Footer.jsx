@@ -41,10 +41,6 @@ const Footer = () => {
                   Home
                 </a>
                 <br />
-                <a href="#about-me" className="footer-nav">
-                  About me
-                </a>
-                <br />
                 <a href="#experience" className="footer-nav">
                   Experience
                 </a>

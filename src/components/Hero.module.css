@@ -1,0 +1,216 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0 5.5rem;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  line-height: var(--leading-normal);
+}
+
+/* Faint grid with a warm glow, fading out towards the edges */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      600px 300px at 80% 20%,
+      rgb(245 165 36 / 0.1),
+      transparent 70%
+    ),
+    linear-gradient(var(--color-border) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(90deg, var(--color-border) 1px, transparent 1px) 0 0 / 48px
+      48px;
+  opacity: 0.5;
+  -webkit-mask-image: radial-gradient(
+    ellipse at 60% 40%,
+    #000 20%,
+    transparent 75%
+  );
+  mask-image: radial-gradient(ellipse at 60% 40%, #000 20%, transparent 75%);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-6);
+  padding: 0.375rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  color: var(--color-muted);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 0 4px rgb(245 165 36 / 0.15);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--text-h1);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+  color: inherit;
+}
+
+.title em {
+  font-style: normal;
+  color: var(--color-accent);
+}
+
+.lead {
+  max-width: 33.75rem;
+  margin: 1.25rem 0 2rem;
+  font-size: var(--text-lg);
+  color: var(--color-muted);
+  overflow-wrap: break-word;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: 2.25rem;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-muted);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.socials a:hover {
+  color: var(--color-accent);
+}
+
+.socials a:focus-visible {
+  outline: none;
+  border-radius: var(--radius-xs);
+  box-shadow: var(--focus-ring);
+}
+
+/* isolation keeps the offset outline (::after) behind the tile */
+.portrait {
+  position: relative;
+  justify-self: end;
+  isolation: isolate;
+}
+
+.portrait::after {
+  content: '';
+  position: absolute;
+  inset: 1rem -1rem -1rem 1rem;
+  z-index: -1;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-xl);
+  opacity: 0.5;
+}
+
+.tile {
+  width: 21.25rem;
+  height: 25rem;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(160deg, #f6e7cc, #efd9b4);
+}
+
+/* The photo has a white background; multiply turns it into the warm tile */
+.tile img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  mix-blend-mode: multiply;
+}
+
+.stat {
+  position: absolute;
+  bottom: 2rem;
+  left: -3rem;
+  margin: 0;
+  padding: 0.875rem 1.125rem;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-surface-2);
+  box-shadow: var(--shadow-lg);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.stat strong {
+  display: block;
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 3rem 0 4rem;
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .lead {
+    font-size: var(--text-base);
+  }
+
+  .portrait {
+    justify-self: stretch;
+    margin-right: 0.75rem;
+  }
+
+  .tile {
+    width: 100%;
+    height: 21.25rem;
+  }
+
+  .portrait::after {
+    inset: 0.75rem -0.75rem -0.75rem 0.75rem;
+  }
+
+  .stat {
+    bottom: 1rem;
+    left: 1rem;
+  }
+}
