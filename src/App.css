@@ -1,8 +1,0 @@
-:root {
-  --primary-white: #ffffff;
-}
-
-body {
-  background-color: var(--color-bg);
-  color: var(--primary-white) !important;
-}
