@@ -1,83 +1,19 @@
-import { useEffect, useMemo, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Particles, { initParticlesEngine } from '@tsparticles/react'
-import { loadSlim } from '@tsparticles/slim'
 import './App.css'
-import Navbar from './components/Navbar'
-import Header from './components/Header'
-import AboutMe from './components/AboutMe'
-import Education from './components/Education'
-import Skills from './components/Skills'
-import Footer from './components/Footer'
 import Contacts from './components/Contacts'
+import Education from './components/Education'
 import Experience from './components/Experience'
+import Footer from './components/Footer'
+import Hero from './components/Hero'
+import Navbar from './components/Navbar'
+import Skills from './components/Skills'
 
 function App() {
-  const [init, setInit] = useState(false)
-
-  // this should be run only once per application lifetime
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine)
-    }).then(() => {
-      setInit(true)
-    })
-  }, [])
-
-  const options = useMemo(
-    () => ({
-      particles: {
-        links: {
-          color: '#ffffff',
-          distance: 150,
-          enable: true,
-          opacity: 0.5,
-          width: 1,
-        },
-        move: {
-          direction: 'none',
-          enable: true,
-          outModes: {
-            default: 'bounce',
-          },
-          random: false,
-          speed: 6,
-          straight: false,
-        },
-        number: {
-          density: {
-            enable: true,
-          },
-          value: 80,
-        },
-        opacity: {
-          value: 0.5,
-        },
-        shape: {
-          type: 'square',
-        },
-        size: {
-          value: { min: 1, max: 6 },
-        },
-      },
-      fullScreen: { enable: false },
-    }),
-    [],
-  )
-
   return (
     <>
-      {init && (
-        <Particles
-          id="tsparticles"
-          className="particles-canvas"
-          options={options}
-        />
-      )}
       <Navbar />
-      <Header />
+      <Hero />
       <div className="container py-5" id="content">
-        <AboutMe />
         <Experience />
         <Skills />
         <Education />
