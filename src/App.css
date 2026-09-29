@@ -1,43 +1,8 @@
 :root {
   --primary-white: #ffffff;
-  --primary-orange: #f9ab00;
 }
 
 body {
   background-color: var(--color-bg);
   color: var(--primary-white) !important;
-}
-
-/******************************* Footer **************************/
-.footer {
-  background-color: black;
-  padding: 8rem;
-}
-
-.footer a {
-  text-decoration: none;
-  color: var(--primary-white);
-}
-
-.footer a:hover {
-  text-decoration: none;
-  color: var(--primary-orange);
-}
-
-.footer p {
-  margin-bottom: 0;
-}
-
-@media (max-width: 468px) {
-  .footer {
-    padding: 3rem;
-  }
-
-  .add-email {
-    justify-content: center;
-  }
-
-  .footer-nav-bar {
-    text-align: center;
-  }
 }
