@@ -1,6 +1,7 @@
 export const experience = [
   {
-    period: 'JUN 2023 - PRESENT',
+    start: '2023-06',
+    end: null,
     title: 'Full-stack Engineer',
     company: 'Air Dice Oy',
     highlights: [
@@ -11,7 +12,8 @@ export const experience = [
     ],
   },
   {
-    period: 'AUG 2022 - JUN 2023',
+    start: '2022-08',
+    end: '2023-06',
     title: 'Full-stack Developer',
     company: 'Integrify',
     highlights: [
@@ -21,7 +23,8 @@ export const experience = [
     ],
   },
   {
-    period: 'APR 2019 - JUN 2019',
+    start: '2019-04',
+    end: '2019-06',
     title: 'IT Helpdesk Intern',
     company: 'Oodi Helsinki Central Library',
     highlights: [
@@ -30,7 +33,8 @@ export const experience = [
     ],
   },
   {
-    period: 'OCT 2011 - JUN 2014',
+    start: '2011-10',
+    end: '2014-06',
     title: 'Accountant Manager',
     company: 'Iraq Oil',
     highlights: [

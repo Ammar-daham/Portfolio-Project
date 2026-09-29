@@ -1,0 +1,67 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.job {
+  display: grid;
+  grid-template-columns: 12.5rem 1fr;
+  gap: 2rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.job:first-child {
+  padding-top: 0;
+}
+
+.job:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.when {
+  margin: 0;
+  padding-top: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.role {
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: normal;
+  color: var(--color-text);
+}
+
+.role span {
+  color: var(--color-accent);
+}
+
+/* list-style-type: nested lists inside the <ol> default to hollow circles */
+.highlights {
+  margin: 0.625rem 0 0 1.125rem;
+  padding: 0;
+  list-style-type: disc;
+  font-size: 0.9375rem;
+  line-height: var(--leading-normal);
+  color: var(--color-muted);
+}
+
+.highlights li + li {
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 900px) {
+  .job {
+    grid-template-columns: 1fr;
+    gap: 0.375rem;
+    padding: 1.375rem 0;
+  }
+}

@@ -15,8 +15,8 @@ function App() {
       <Navbar />
       <Hero />
       <Projects />
+      <Experience />
       <div className="container py-5" id="content">
-        <Experience />
         <Skills />
         <Education />
         <Contacts />
