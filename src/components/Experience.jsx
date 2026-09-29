@@ -10,19 +10,11 @@ const Experience = () => {
           <div className="timeline-content">
             <h5>JUN 2023 - PRESENT</h5>
             <p>
-              Full-stack developer at Air dice Oy
+              Full-stack Developer at Air Dice Oy
               <ul>
-                <li>Monitoring and tracking tool&apos;s maintenance.</li>
-                <li>
-                  Preparing and deploying new games to the staging environment.
-                </li>
-                <li>
-                  Developing promotional tools to boost player engagement.
-                </li>
-                <li>
-                  Conducting thorough testing procedures to ensure optimal game
-                  quality.
-                </li>
+                <li>Develop promotional tools that boost player engagement.</li>
+                <li>Maintain the monitoring and tracking tools.</li>
+                <li>Prepare, test and deploy new games to staging.</li>
               </ul>
             </p>
           </div>
@@ -32,31 +24,19 @@ const Experience = () => {
           <div className="timeline-content">
             <h5>AUG 2022 - JUN 2023</h5>
             <p>
-              Full-stack developer at Integrify
+              Full-stack Developer at Integrify
               <ul>
                 <li>
-                  Sharpening competence as a Full Stack Developer by
-                  collaborating with other developers of different seniorities
-                  on a diverse range of projects and real-life challenges.
+                  Built front ends with JavaScript, TypeScript, React and Redux,
+                  with a focus on accessibility and animation.
                 </li>
                 <li>
-                  Focusing on front-end development with JavaScript, TypeScript,
-                  React.js, Redux in addition to other technologies and concepts
-                  such as accessibility and animations.
+                  Built and documented REST APIs with Java, Node.js and Express
+                  on SQL and NoSQL databases, unit-tested with Jest.
                 </li>
                 <li>
-                  Building back-end for web-based applications with Java, along
-                  with frameworks such as Node.js and Express.js.
-                </li>
-                <li>
-                  Covering additional concepts such as API development and
-                  documentation, unit testing with Jest, SQL and NoSQL
-                  databases, and version control with GitHub.
-                </li>
-                <li>
-                  Working with DevOps practices (Bash scripting, Docker
-                  containers, and CI/CD with GitHub Actions) and Cloud Services
-                  with AWS.
+                  Worked with Docker, CI/CD in GitHub Actions and AWS on
+                  real-world projects alongside developers of every seniority.
                 </li>
               </ul>
             </p>
@@ -67,17 +47,15 @@ const Experience = () => {
           <div className="timeline-content">
             <h5>APR 2019 - JUN 2019</h5>
             <p className="para">
-              IT helpdesk intern at Oodi Helsinki Central library
+              IT Helpdesk Intern at Oodi Helsinki Central Library
               <ul>
-                <li>Maintaining devices and IT services.</li>
                 <li>
-                  Responsible for gaming desk function, printer maintenance, and
-                  backing up the computers.
+                  Helped 100+ IT customers a day at a library with 1,000+ daily
+                  visitors.
                 </li>
                 <li>
-                  The job required proactivity and problem-solving skills to
-                  help customers with IT tasks for the 100+ daily IT customers
-                  and 1000+ daily visitors.
+                  Maintained devices and IT services, ran the gaming desk, and
+                  handled printer maintenance and computer backups.
                 </li>
               </ul>
             </p>
@@ -88,18 +66,15 @@ const Experience = () => {
           <div className="timeline-content">
             <h5>OCT 2011 - JUN 2014</h5>
             <p className="para">
-              Accountant manager at Iraq Oil
+              Accounting Manager at Iraq Oil
               <ul>
                 <li>
-                  Responsible for depositing money and accounting for several
-                  gas stations and oil storage depots.
+                  Managed deposits and accounts for several gas stations and oil
+                  storage depots.
                 </li>
                 <li>
-                  Directly managed and was responsible for 25 station workers.
-                </li>
-                <li>
-                  Supported the station workers to deliver excellent customer
-                  service and on average 70t€ daily sales.
+                  Led a team of 25 station workers, supporting good customer
+                  service and an average of €70k in daily sales.
                 </li>
               </ul>
             </p>

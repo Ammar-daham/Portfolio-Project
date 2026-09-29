@@ -2,10 +2,10 @@
   "frontendSkills": [
     { "skill": "JavaScript", "progress": 90 },
     { "skill": "TypeScript", "progress": 70 },
-    { "skill": "ReactJs", "progress": 80 },
+    { "skill": "React", "progress": 80 },
     { "skill": "React Native", "progress": 80 },
-    { "skill": "VueJs", "progress": 80 },
-    { "skill": "FreeMarker Template skill", "progress": 70 },
+    { "skill": "Vue.js", "progress": 80 },
+    { "skill": "FreeMarker", "progress": 70 },
     { "skill": "HTML5", "progress": 90 },
     { "skill": "CSS", "progress": 90 },
     { "skill": "Material UI", "progress": 100 },

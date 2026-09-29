@@ -21,7 +21,7 @@ const Footer = () => {
             style={{ marginBottom: '2rem' }}
           >
             <div className="d-flex add-email">
-              <p>City Helsinki</p>
+              <p>Helsinki, Finland</p>
             </div>
             <div className="d-flex add-email">
               <a href="tel:0403223634">+(358)40322-3634</a>
