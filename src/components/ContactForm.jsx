@@ -6,8 +6,9 @@ import Card from './ui/Card'
 import Icon from './ui/Icon'
 import styles from './ContactForm.module.css'
 
-// Set in .env. These IDs are public by design (they ship in the bundle), so
-// the EmailJS dashboard limits which origins may use them.
+// Set in .env locally (see .env.example) and in Netlify's environment
+// variables. They are public by design (they ship in the bundle), so the
+// EmailJS dashboard limits which origins may use them.
 const EMAILJS = {
   serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
   templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
