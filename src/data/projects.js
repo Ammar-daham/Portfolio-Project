@@ -1,7 +1,5 @@
 import todoApp from '../assets/projects/todo-app.webp'
 
-// Projects for the Projects section. Screenshots are 1200×750 WebP files
-// in src/assets/projects/; `image: null` means the screenshot is still missing.
 export const projects = [
   {
     id: 'salon',
