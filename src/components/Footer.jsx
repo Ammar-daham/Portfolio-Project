@@ -10,6 +10,7 @@ import {
   EmailShareButton,
   EmailIcon,
 } from 'react-share'
+import { profile } from '../data/profile'
 
 const Footer = () => {
   return (
@@ -21,13 +22,13 @@ const Footer = () => {
             style={{ marginBottom: '2rem' }}
           >
             <div className="d-flex add-email">
-              <p>Helsinki, Finland</p>
+              <p>{profile.location}</p>
             </div>
             <div className="d-flex add-email">
-              <a href="tel:0403223634">+(358)40322-3634</a>
+              <a href={profile.phone.href}>{profile.phone.display}</a>
             </div>
             <div className="d-flex add-email">
-              <p>aljewaryammar@gmail.com</p>
+              <p>{profile.email}</p>
             </div>
           </div>
           <div
@@ -58,10 +59,7 @@ const Footer = () => {
                   Education
                 </a>
                 <br />
-                <a
-                  href="https://www.linkedin.com/in/ammar-daham/"
-                  className="footer-nav"
-                >
+                <a href={profile.links.linkedin} className="footer-nav">
                   LinkedIn
                 </a>
                 <br />
@@ -79,19 +77,19 @@ const Footer = () => {
             </div>
             <br />
             <div className="d-flex justify-content-center">
-              <LinkedinShareButton url={'https://github.com/Ammar-daham/'}>
+              <LinkedinShareButton url={profile.links.github}>
                 <LinkedinIcon className="mx-3" size={36} />
               </LinkedinShareButton>
-              <WhatsappShareButton url={'https://github.com/Ammar-daham/'}>
+              <WhatsappShareButton url={profile.links.github}>
                 <WhatsappIcon className="mx-3" size={36} />
               </WhatsappShareButton>
-              <FacebookShareButton url={'https://github.com/Ammar-daham/'}>
+              <FacebookShareButton url={profile.links.github}>
                 <FacebookIcon className="mx-3" size={36} />
               </FacebookShareButton>
-              <TwitterShareButton url={'https://github.com/Ammar-daham/'}>
+              <TwitterShareButton url={profile.links.github}>
                 <XIcon className="mx-3" size={36} />
               </TwitterShareButton>
-              <EmailShareButton url={'https://github.com/Ammar-daham/'}>
+              <EmailShareButton url={profile.links.github}>
                 <EmailIcon className="mx-3" size={36} />
               </EmailShareButton>
             </div>

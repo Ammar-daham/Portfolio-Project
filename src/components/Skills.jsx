@@ -2,7 +2,7 @@ import * as React from 'react'
 import LinearProgress from '@mui/material/LinearProgress'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
-import skillsData from './skills.json'
+import { skillGroups } from '../data/skills'
 
 function LinearProgressWithLabel({ targetValue, skill }) {
   const [progress, setProgress] = React.useState(0)
@@ -79,11 +79,13 @@ const Skills = () => {
         <h2>Skills</h2>
       </div>
       <Box sx={{ width: '100%' }}>
-        <SkillSection title="Front-End" skills={skillsData.frontendSkills} />
-        <SkillSection title="Back-End" skills={skillsData.backendSkills} />
-        <SkillSection title="Database" skills={skillsData.databaseSkills} />
-        <SkillSection title="DevOps" skills={skillsData.devopsSkills} />
-        <SkillSection title="Others" skills={skillsData.otherSkills} />
+        {skillGroups.map((group) => (
+          <SkillSection
+            key={group.title}
+            title={group.title}
+            skills={group.skills}
+          />
+        ))}
       </Box>
     </div>
   )

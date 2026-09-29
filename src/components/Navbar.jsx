@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { profile } from '../data/profile'
 
 const Navbar = () => {
   return (
@@ -49,10 +50,7 @@ const Navbar = () => {
             </li>
 
             <li className="nav-item">
-              <a
-                href="https://www.linkedin.com/in/ammar-daham/"
-                className="nav-link"
-              >
+              <a href={profile.links.linkedin} className="nav-link">
                 LinkedIn
               </a>
             </li>

@@ -1,17 +1,14 @@
 import { ReactTyped } from 'react-typed'
+import { profile } from '../data/profile'
 
 const Header = () => {
   return (
     <div className="header-wraper" id="header">
       <div className="main-info">
-        <h1>Hi, I&apos;m Ammar Daham</h1>
+        <h1>{profile.hero.heading}</h1>
         <ReactTyped
           className="typed-text"
-          strings={[
-            'Full-stack developer',
-            'React · Node.js · Java',
-            'Helsinki, Finland',
-          ]}
+          strings={profile.hero.taglines}
           typeSpeed={50}
           backSpeed={60}
           loop
