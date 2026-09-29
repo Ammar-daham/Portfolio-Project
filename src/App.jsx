@@ -17,8 +17,8 @@ function App() {
       <Projects />
       <Experience />
       <Skills />
+      <Education />
       <div className="container py-5" id="content">
-        <Education />
         <Contacts />
       </div>
       <Footer />
