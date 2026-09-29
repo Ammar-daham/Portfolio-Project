@@ -2,8 +2,8 @@
  * Reset and base typography.
  *
  * Both live in cascade layers, and layered rules always lose to unlayered
- * ones. While Bootstrap and App.css still style the old sections, their
- * rules win; once they are removed, these take over.
+ * ones, so component styles (CSS Modules) override them without needing
+ * extra specificity.
  */
 @layer reset, base;
 
@@ -56,6 +56,12 @@
     scroll-padding-top: var(--nav-height);
   }
 
+  @media (prefers-reduced-motion: no-preference) {
+    :root {
+      scroll-behavior: smooth;
+    }
+  }
+
   body {
     min-height: 100vh;
     font-family: var(--font-sans);
@@ -65,6 +71,7 @@
     background-color: var(--color-bg);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
   }
 
   h1,
