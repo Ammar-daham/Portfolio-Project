@@ -12,9 +12,20 @@ const Experience = () => {
             <p>
               Full-stack Developer at Air Dice Oy
               <ul>
+                <li>
+                  Build and maintain internal tools, including the monitoring,
+                  tracking and game management tools, and support the teams that
+                  use them.
+                </li>
                 <li>Develop promotional tools that boost player engagement.</li>
-                <li>Maintain the monitoring and tracking tools.</li>
-                <li>Prepare, test and deploy new games to staging.</li>
+                <li>
+                  Prepare, test and deploy new games to QA and testing
+                  environments.
+                </li>
+                <li>
+                  Take part in software architecture design and write clear
+                  documentation.
+                </li>
               </ul>
             </p>
           </div>
@@ -66,7 +77,7 @@ const Experience = () => {
           <div className="timeline-content">
             <h5>OCT 2011 - JUN 2014</h5>
             <p className="para">
-              Accounting Manager at Iraq Oil
+              Accountant Manager at Iraq Oil
               <ul>
                 <li>
                   Managed deposits and accounts for several gas stations and oil

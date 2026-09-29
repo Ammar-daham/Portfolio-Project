@@ -17,12 +17,12 @@ const AboutMe = () => {
         <div className="col-lg-6 col-xm-12">
           <h2>About me</h2>
           <p className="para">
-            I&apos;m Ammar Daham, a full-stack developer in Helsinki. At Air
-            Dice Oy I build and maintain promotional and monitoring tools for
-            iGaming, and I work across the stack with React, Node.js and Java. I
-            hold a Bachelor&apos;s degree in ICT from Metropolia University of
-            Applied Sciences and a Bachelor&apos;s degree in Computer Science
-            and Mathematics from the University of Mosul.
+            I&apos;m Ammar Daham, a full-stack engineer in Helsinki who builds
+            with JavaScript, TypeScript and Java. At Air Dice Oy I build tools
+            for other teams and give them the support they need. My earlier work
+            as a manager taught me to take responsibility and drive projects
+            forward, and as a team player I enjoy collaborating and sharing the
+            work to reach our goals.
           </p>
         </div>
       </div>

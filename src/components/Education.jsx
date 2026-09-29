@@ -10,8 +10,8 @@ const Education = () => {
           <div className="timeline-content">
             <h5>2020-2024</h5>
             <p>
-              Bachelor&apos;s degree in ICT, Metropolia University of Applied
-              Sciences.
+              Bachelor of Engineering in Information Technology, Metropolia
+              University of Applied Sciences.
               <br />
               <span>
                 <b>Thesis: </b>Promotional tool for iGaming
@@ -54,7 +54,8 @@ const Education = () => {
           <div className="timeline-content">
             <h5>2018-2020</h5>
             <p className="para">
-              Studied information and communications technology.
+              Vocational qualification in Information and Communications
+              Technology, Omnia Vocational School.
               <ul>
                 <li>
                   Built two online-shop websites with React and WordPress as
@@ -71,8 +72,8 @@ const Education = () => {
           <div className="timeline-content">
             <h5>2007-2011</h5>
             <p className="para">
-              Bachelor&apos;s degree in Computer Science and Mathematics,
-              College of Education, University of Mosul.
+              Bachelor of Science in Computers and Mathematics, College of
+              Education, University of Mosul.
               <br />
               <span>
                 <b>Thesis: </b>Image processing using filters.
