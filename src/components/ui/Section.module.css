@@ -1,0 +1,44 @@
+.section {
+  padding-block: var(--section-space);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+}
+
+.eyebrow {
+  margin: 0 0 0.625rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-accent);
+}
+
+/* Tight line-height for wrapped titles. The extra space above (padding, so
+   it doesn't collapse into the eyebrow's margin) and below keeps the mockup's
+   spacing, where the heading inherited a 1.6 line-height. */
+.title {
+  margin: 0 0 1.3125rem;
+  padding-top: 0.5625rem;
+  font-size: var(--text-h2);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  text-wrap: balance;
+  color: inherit;
+}
+
+.sub {
+  max-width: 35rem;
+  margin: 0 0 2.75rem;
+  color: var(--color-muted);
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 900px) {
+  .sub {
+    margin-bottom: var(--space-8);
+  }
+}

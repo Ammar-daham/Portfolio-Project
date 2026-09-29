@@ -9,9 +9,11 @@
   --color-surface: #12151a;
   --color-surface-2: #181c22;
   --color-border: #232830;
+  --color-border-strong: #313844;
   --color-text: #e8eaed;
   --color-muted: #9aa3ae;
   --color-accent: #f5a524;
+  --color-accent-hover: #ffb640;
   --color-accent-soft: rgb(245 165 36 / 0.12);
   --color-on-accent: #111111;
   --color-success: #3ecf8e;
