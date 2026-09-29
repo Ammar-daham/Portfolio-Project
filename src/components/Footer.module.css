@@ -1,0 +1,27 @@
+.footer {
+  padding-block: var(--space-8);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg);
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: var(--leading-normal);
+  color: var(--color-muted);
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.text {
+  margin: 0;
+  color: inherit;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+}

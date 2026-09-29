@@ -2,7 +2,6 @@ export const profile = {
   name: 'Ammar Daham',
   location: 'Helsinki, Finland',
   email: 'aljewaryammar@gmail.com',
-  phone: { display: '+358 40 322 3634', href: 'tel:+358403223634' },
   links: {
     github: 'https://github.com/Ammar-daham/',
     linkedin: 'https://www.linkedin.com/in/ammar-daham/',
