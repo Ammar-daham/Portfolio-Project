@@ -22,3 +22,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# private CV with references' contact details (never commit)
+/resume/private/
