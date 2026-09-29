@@ -9,7 +9,7 @@ const AboutMe = () => {
             <img
               src={MyPhoto}
               className="profile-img"
-              alt="MyPhoto"
+              alt="Portrait of Ammar Daham"
               data-holder-rendered="true"
             />
           </div>
@@ -17,17 +17,12 @@ const AboutMe = () => {
         <div className="col-lg-6 col-xm-12">
           <h2>About me</h2>
           <p className="para">
-            Hello! I am Ammar Daham, a software engineer with a diverse
-            educational background and extensive experience in web and
-            application development. I hold a Bachelor&apos;s degree in ICT from
-            Metropolia University of Applied Sciences and another
-            Bachelor&apos;s degree in Computer Science and Mathematics from the
-            College of Education at the University of Mosul. Currently, I am
-            employed at Air Dice Oy, where I contribute to innovative projects
-            and collaborate effectively with my team. I pride myself on being
-            detail-oriented and result-driven, always striving for excellence in
-            my work. I thrive in team environments, embracing collaboration and
-            the delegation of tasks to achieve our collective goals.
+            I&apos;m Ammar Daham, a full-stack engineer in Helsinki who builds
+            with JavaScript, TypeScript and Java. At Air Dice Oy I build tools
+            for other teams and give them the support they need. My earlier work
+            as a manager taught me to take responsibility and drive projects
+            forward, and as a team player I enjoy collaborating and sharing the
+            work to reach our goals.
           </p>
         </div>
       </div>

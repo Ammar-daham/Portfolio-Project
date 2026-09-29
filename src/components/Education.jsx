@@ -2,7 +2,7 @@ const Education = () => {
   return (
     <div className="blog" id="education">
       <div className="d-flex justify-content-center">
-        <h2>education</h2>
+        <h2>Education</h2>
       </div>
       <div className="container education-wrapper">
         <div className="timeline-block timeline-block-left">
@@ -10,11 +10,11 @@ const Education = () => {
           <div className="timeline-content">
             <h5>2020-2024</h5>
             <p>
-              Bachelor ICT degree from Metropolia university of applied
-              sciences.
+              Bachelor of Engineering in Information Technology, Metropolia
+              University of Applied Sciences.
               <br />
               <span>
-                <b>Thesis: </b>Promotional tool for IGaming
+                <b>Thesis: </b>Promotional tool for iGaming
               </span>
               <br />
               <span>
@@ -26,7 +26,7 @@ const Education = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Free Spins give away
+                Free Spins giveaway
               </a>
             </p>
           </div>
@@ -36,15 +36,15 @@ const Education = () => {
           <div className="timeline-content">
             <h5>2022</h5>
             <p>
-              Exchange program at Amsterdam University of Applied Sciences,
-              focusing on Big Data and Machine Learning.
+              Exchange at Amsterdam University of Applied Sciences, focusing on
+              big data and machine learning.
               <br />
               <span>
                 <b>Projects: </b>
               </span>
               <ul>
-                <li>Sentiment analysis for hotel reviews.</li>
-                <li>Model to predict the wild fires in Australia</li>
+                <li>Sentiment analysis of hotel reviews.</li>
+                <li>A model that predicts wildfires in Australia.</li>
               </ul>
             </p>
           </div>
@@ -54,14 +54,15 @@ const Education = () => {
           <div className="timeline-content">
             <h5>2018-2020</h5>
             <p className="para">
-              Studied information and communications technology.
+              Vocational qualification in Information and Communications
+              Technology, Omnia Vocational School.
               <ul>
                 <li>
-                  I have designed two websites as an online shop using React and
-                  WordPress and it was school project.
+                  Built two online-shop websites with React and WordPress as
+                  school projects.
                 </li>
-                <li>Certificate of privacy education 17.03.2019.</li>
-                <li>Certified ScrumMaster® (CSM®) 26.12.2019</li>
+                <li>Certificate of privacy education, 17.03.2019.</li>
+                <li>Certified ScrumMaster® (CSM®), 26.12.2019.</li>
               </ul>
             </p>
           </div>
@@ -71,11 +72,11 @@ const Education = () => {
           <div className="timeline-content">
             <h5>2007-2011</h5>
             <p className="para">
-              Bachelor degree from the college of education, department of
-              computer science and manthmatics at the university of Mosul.
+              Bachelor of Science in Computers and Mathematics, College of
+              Education, University of Mosul.
               <br />
               <span>
-                <b>Thesis: </b> Image processing using filters.
+                <b>Thesis: </b>Image processing using filters.
               </span>
             </p>
           </div>
