@@ -57,20 +57,22 @@
       /* Header */
       header {
         grid-column: 1 / -1;
-        display: flex;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
         align-items: center;
         gap: 7mm;
-        padding: 10mm 14mm 7mm;
-        border-bottom: 1px solid var(--rule);
+        padding: 6.5mm 14mm 7.5mm;
+        background: var(--ink);
+        color: #fff;
         position: relative;
       }
       header::after {
         content: '';
         position: absolute;
-        left: 14mm;
-        bottom: -1.5px;
-        width: 24mm;
-        height: 3px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1.2mm;
         background: var(--accent);
       }
       .photo {
@@ -80,10 +82,10 @@
         object-fit: cover;
         object-position: center 18%;
         border: 2px solid var(--accent);
-        flex: none;
+        background: #fff;
       }
       h1 {
-        font-size: 23pt;
+        font-size: 24pt;
         line-height: 1.05;
         font-weight: 800;
         letter-spacing: -0.02em;
@@ -91,20 +93,41 @@
       .role {
         font-size: 11.5pt;
         font-weight: 600;
-        color: var(--accent-ink);
-        margin: 1mm 0 2.4mm;
+        color: var(--accent); /* 9.5:1 on the dark header */
+        margin-top: 1.4mm;
       }
       .contact {
         list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1mm 4.5mm;
-        color: var(--muted);
-        font-size: 8.8pt;
+        display: grid;
+        gap: 1mm;
+        padding-left: 7mm;
+        border-left: 1px solid rgba(255, 255, 255, 0.14);
+        font-size: 8.6pt;
+        color: #e3e6ea;
       }
-      .contact a {
-        color: var(--ink);
-        border-bottom: 1px solid var(--rule);
+      .contact li {
+        display: flex;
+        align-items: center;
+        gap: 2.4mm;
+      }
+      .contact .icon {
+        width: 4.6mm;
+        height: 4.6mm;
+        border-radius: 50%;
+        background: rgba(245, 165, 36, 0.16);
+        color: var(--accent);
+        display: grid;
+        place-items: center;
+        flex: none;
+      }
+      .contact svg {
+        width: 2.8mm;
+        height: 2.8mm;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
       }
 
       /* Columns */
@@ -134,6 +157,9 @@
       }
       section + section {
         margin-top: 4.6mm;
+      }
+      aside section + section {
+        margin-top: 4.1mm;
       }
       .profile {
         color: var(--ink);
@@ -201,7 +227,7 @@
         margin-top: 2.2mm;
       }
       .edu .when {
-        display: block;
+        font-size: inherit;
       }
       .edu h4 {
         font-size: 9pt;
@@ -218,35 +244,81 @@
         color: var(--ink);
         font-weight: 600;
       }
+      .ref + .ref {
+        margin-top: 2mm;
+      }
+      .ref h4 {
+        font-size: 9pt;
+        font-weight: 600;
+      }
+      .ref p,
+      .ref-note {
+        color: var(--muted);
+        font-size: 8.5pt;
+      }
+      .ref-note {
+        margin-top: 1.6mm;
+        font-style: italic;
+      }
     </style>
   </head>
   <body>
     <div class="page">
+      <!-- Line icons from Feather (MIT licence) -->
       <header>
         <img class="photo" src="photo.jpg" alt="Ammar Daham" />
         <div>
           <h1>Ammar Daham</h1>
           <p class="role">Full-stack Software Engineer</p>
-          <ul class="contact">
-            <li>Helsinki, Finland</li>
-            <li><a href="tel:+358403223634">+358 40 322 3634</a></li>
-            <li>
-              <a href="mailto:aljewaryammar@gmail.com"
-                >aljewaryammar@gmail.com</a
-              >
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/ammar-daham/"
-                >linkedin.com/in/ammar-daham</a
-              >
-            </li>
-            <li>
-              <a href="https://github.com/Ammar-daham"
-                >github.com/Ammar-daham</a
-              >
-            </li>
-          </ul>
         </div>
+        <ul class="contact">
+          <li>
+            <span class="icon"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" /></svg></span
+            >Helsinki, Finland
+          </li>
+          <li>
+            <span class="icon"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                /></svg></span
+            ><a href="tel:+358403223634">+358 40 322 3634</a>
+          </li>
+          <li>
+            <span class="icon"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" /></svg></span
+            ><a href="mailto:aljewaryammar@gmail.com"
+              >aljewaryammar@gmail.com</a
+            >
+          </li>
+          <li>
+            <span class="icon"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" /></svg></span
+            ><a href="https://www.linkedin.com/in/ammar-daham/"
+              >linkedin.com/in/ammar-daham</a
+            >
+          </li>
+          <li>
+            <span class="icon"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                /></svg></span
+            ><a href="https://github.com/Ammar-daham">github.com/Ammar-daham</a>
+          </li>
+        </ul>
       </header>
 
       <div class="main">
@@ -432,24 +504,25 @@
         <section>
           <h2>Education</h2>
           <div class="edu">
-            <span class="when">2020 – 2024</span>
             <h4>B.Eng. in Information Technology</h4>
-            <p>Metropolia University of Applied Sciences</p>
+            <p>
+              Metropolia University of Applied Sciences ·
+              <span class="when">2020 – 2024</span>
+            </p>
           </div>
           <div class="edu">
-            <span class="when">2018 – 2020</span>
             <h4>Vocational qualification in ICT</h4>
-            <p>Omnia Vocational School</p>
+            <p>
+              Omnia Vocational School · <span class="when">2018 – 2020</span>
+            </p>
           </div>
           <div class="edu">
-            <span class="when">2007 – 2010</span>
             <h4>B.Sc. in Computers and Mathematics</h4>
-            <p>University of Mosul</p>
+            <p>University of Mosul · <span class="when">2007 – 2010</span></p>
           </div>
           <div class="edu">
-            <span class="when">2019</span>
             <h4>Certified ScrumMaster® (CSM®)</h4>
-            <p>Scrum Alliance</p>
+            <p>Scrum Alliance · <span class="when">2019</span></p>
           </div>
         </section>
 
@@ -457,8 +530,7 @@
           <h2>Languages</h2>
           <ul>
             <li><b>Arabic</b> · native</li>
-            <li><b>English</b> · fluent</li>
-            <li><b>Finnish</b> · fluent</li>
+            <li><b>English, Finnish</b> · fluent</li>
           </ul>
         </section>
 
@@ -471,9 +543,15 @@
 
         <section>
           <h2>References</h2>
-          <ul>
-            <li>Available on request</li>
-          </ul>
+          <div class="ref">
+            <h4>Rami Al-Karo</h4>
+            <p>Software Engineer, Visma Solutions</p>
+          </div>
+          <div class="ref">
+            <h4>Ira Vainio</h4>
+            <p>Sustainability Manager, K-Auto</p>
+          </div>
+          <p class="ref-note">Contact details on request</p>
         </section>
       </aside>
     </div>
