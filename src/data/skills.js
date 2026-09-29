@@ -22,7 +22,7 @@ export const skillGroups = [
       { name: 'Sass' },
       { name: 'Tailwind CSS' },
       { name: 'Material UI' },
-      { name: 'Bootstrap', true },
+      { name: 'Bootstrap', core: true },
     ],
   },
   {
