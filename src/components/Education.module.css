@@ -62,12 +62,12 @@
   font-size: var(--text-md);
   font-weight: 600;
   line-height: 1.5;
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   text-decoration: none;
 }
 
 .link:hover {
-  color: var(--color-accent-hover);
+  color: var(--color-accent-text-hover);
   text-decoration: underline;
   text-underline-offset: 3px;
 }

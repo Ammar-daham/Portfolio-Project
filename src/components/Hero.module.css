@@ -74,7 +74,7 @@
 
 .title em {
   font-style: normal;
-  color: var(--color-accent);
+  color: var(--color-accent-text);
 }
 
 .lead {
@@ -114,7 +114,7 @@
 }
 
 .socials a:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
 }
 
 .socials a:focus-visible {
@@ -178,7 +178,7 @@
   display: block;
   font-size: var(--text-xl);
   font-weight: 700;
-  color: var(--color-accent);
+  color: var(--color-accent-text);
 }
 
 @media (max-width: 900px) {

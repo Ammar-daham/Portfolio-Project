@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { profile } from '../data/profile'
 import { useActiveSection } from '../hooks/useActiveSection'
+import { useTheme } from '../hooks/useTheme'
 import Button from './ui/Button'
 import Container from './ui/Container'
 import Icon from './ui/Icon'
@@ -21,6 +22,8 @@ const DESKTOP = '(min-width: 901px)'
 const Navbar = () => {
   const [open, setOpen] = useState(false)
   const active = useActiveSection(SECTION_IDS)
+  const [theme, toggleTheme] = useTheme()
+  const nextTheme = theme === 'dark' ? 'light' : 'dark'
   const headerRef = useRef(null)
   const menuRef = useRef(null)
   const toggleRef = useRef(null)
@@ -88,16 +91,35 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
+            <li className={styles.themeItem}>
+              <button
+                type="button"
+                className={styles.themeRow}
+                onClick={toggleTheme}
+              >
+                <Icon name={nextTheme === 'light' ? 'sun' : 'moon'} />
+                Switch to {nextTheme} theme
+              </button>
+            </li>
           </ul>
 
           <div className={styles.actions}>
+            <button
+              type="button"
+              className={`${styles.iconButton} ${styles.themeBar}`}
+              aria-label={`Switch to ${nextTheme} theme`}
+              title={`Switch to ${nextTheme} theme`}
+              onClick={toggleTheme}
+            >
+              <Icon name={nextTheme === 'light' ? 'sun' : 'moon'} size={18} />
+            </button>
             <Button variant="ghost" href={RESUME_URL} download>
               Résumé <Icon name="download" />
             </Button>
             <button
               ref={toggleRef}
               type="button"
-              className={styles.toggle}
+              className={`${styles.iconButton} ${styles.toggle}`}
               aria-expanded={open}
               aria-controls="nav-menu"
               aria-label={open ? 'Close menu' : 'Open menu'}

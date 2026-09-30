@@ -6,6 +6,12 @@ All notable changes to this site are listed here. The format follows
 
 ## [Unreleased]
 
+### Added
+
+- A light theme. The site follows the system's light or dark setting, and a
+  switch in the navbar (in the menu on phones) changes it. A choice that
+  differs from the system is remembered.
+
 ## [1.0.0] - 2026-09-30
 
 Initial release.
