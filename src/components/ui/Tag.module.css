@@ -16,7 +16,6 @@
   background: var(--color-surface-2);
   font-family: var(--font-mono);
   line-height: var(--leading-normal);
-  white-space: nowrap;
 }
 
 .sm {

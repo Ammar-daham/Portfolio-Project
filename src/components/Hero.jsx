@@ -1,3 +1,4 @@
+import { useId } from 'react'
 import portrait from '../ammar.webp'
 import { profile } from '../data/profile'
 import Button from './ui/Button'
@@ -17,6 +18,7 @@ const yearsSince = (yearMonth) => {
 const Hero = () => {
   const { hero, links, email, name, role, location } = profile
   const years = yearsSince(profile.fullStackSince)
+  const titleId = useId()
   const socials = [
     { label: 'GitHub', href: links.github, external: true },
     { label: 'LinkedIn', href: links.linkedin, external: true },
@@ -24,14 +26,14 @@ const Hero = () => {
   ]
 
   return (
-    <header id="header" className={styles.hero}>
+    <section id="home" aria-labelledby={titleId} className={styles.hero}>
       <Container className={styles.inner}>
         <div>
           <p className={styles.pill}>
             <span className={styles.dot} aria-hidden="true" />
             {role} · {location}
           </p>
-          <h1 className={styles.title}>
+          <h1 id={titleId} className={styles.title}>
             {hero.greeting}
             <br />
             {hero.headline.before} <em>{hero.headline.emphasis}</em>
@@ -77,7 +79,7 @@ const Hero = () => {
           )}
         </div>
       </Container>
-    </header>
+    </section>
   )
 }
 

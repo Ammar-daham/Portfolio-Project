@@ -97,6 +97,16 @@
     outline-offset: 2px;
   }
 
+  /* Components draw focus rings with box-shadow, which forced-colours
+     modes (such as Windows High Contrast) remove. !important lets this
+     layered rule beat their unlayered `outline: none`. */
+  @media (forced-colors: active) {
+    :focus-visible {
+      outline: 2px solid CanvasText !important;
+      outline-offset: 2px !important;
+    }
+  }
+
   ::selection {
     background: var(--color-accent);
     color: var(--color-on-accent);
