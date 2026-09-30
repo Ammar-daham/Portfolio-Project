@@ -7,7 +7,7 @@ import Icon from './ui/Icon'
 import styles from './Navbar.module.css'
 
 const LINKS = [
-  { id: 'header', label: 'Home' },
+  { id: 'home', label: 'Home' },
   { id: 'projects', label: 'Projects' },
   { id: 'experience', label: 'Experience' },
   { id: 'skills', label: 'Skills' },
@@ -21,85 +21,94 @@ const DESKTOP = '(min-width: 901px)'
 const Navbar = () => {
   const [open, setOpen] = useState(false)
   const active = useActiveSection(SECTION_IDS)
-  const navRef = useRef(null)
+  const headerRef = useRef(null)
+  const menuRef = useRef(null)
   const toggleRef = useRef(null)
   const [first, last] = profile.name.toLowerCase().split(' ')
 
-  // While the mobile menu is open: Esc, a click outside, or growing to the
-  // desktop layout closes it
+  // Opening the mobile menu moves focus to its first link (the links come
+  // before the toggle in the DOM, so Tab alone would skip them). While it's
+  // open, Esc, a click or focus outside the header, or growing to the
+  // desktop layout closes it.
   useEffect(() => {
     if (!open) return
+    menuRef.current?.querySelector('a')?.focus()
     const onKeyDown = (event) => {
       if (event.key === 'Escape') {
         setOpen(false)
         toggleRef.current?.focus()
       }
     }
-    const onPointerDown = (event) => {
-      if (!navRef.current?.contains(event.target)) setOpen(false)
+    const onOutside = (event) => {
+      if (!headerRef.current?.contains(event.target)) setOpen(false)
     }
     const onResize = () => {
       if (window.matchMedia(DESKTOP).matches) setOpen(false)
     }
     document.addEventListener('keydown', onKeyDown)
-    document.addEventListener('pointerdown', onPointerDown)
+    document.addEventListener('pointerdown', onOutside)
+    document.addEventListener('focusin', onOutside)
     window.addEventListener('resize', onResize)
     return () => {
       document.removeEventListener('keydown', onKeyDown)
-      document.removeEventListener('pointerdown', onPointerDown)
+      document.removeEventListener('pointerdown', onOutside)
+      document.removeEventListener('focusin', onOutside)
       window.removeEventListener('resize', onResize)
     }
   }, [open])
 
   return (
-    <nav ref={navRef} className={styles.nav} aria-label="Main">
-      <Container className={styles.bar}>
-        <a
-          href="#header"
-          className={styles.logo}
-          aria-label={`${profile.name}, back to top`}
-        >
-          {first}
-          <span>.</span>
-          {last}
-        </a>
-
-        <ul
-          id="nav-menu"
-          className={`${styles.links} ${open ? styles.open : ''}`.trim()}
-        >
-          {LINKS.map(({ id, label }) => (
-            <li key={id}>
-              <a
-                href={`#${id}`}
-                className={styles.link}
-                aria-current={active === id ? 'location' : undefined}
-                onClick={() => setOpen(false)}
-              >
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        <div className={styles.actions}>
-          <Button variant="ghost" href={RESUME_URL} download>
-            Résumé <Icon name="download" />
-          </Button>
-          <button
-            ref={toggleRef}
-            type="button"
-            className={styles.toggle}
-            aria-expanded={open}
-            aria-controls="nav-menu"
-            aria-label={open ? 'Close menu' : 'Open menu'}
-            onClick={() => setOpen((isOpen) => !isOpen)}
+    <header ref={headerRef} className={styles.nav}>
+      <nav aria-label="Main">
+        <Container className={styles.bar}>
+          <a
+            href="#home"
+            className={styles.logo}
+            aria-label={`${profile.name}, back to top`}
           >
-            <Icon name={open ? 'x' : 'menu'} size={20} />
-          </button>
-        </div>
-      </Container>
-    </nav>
+            {first}
+            <span>.</span>
+            {last}
+          </a>
+
+          <ul
+            ref={menuRef}
+            id="nav-menu"
+            className={`${styles.links} ${open ? styles.open : ''}`.trim()}
+          >
+            {LINKS.map(({ id, label }) => (
+              <li key={id}>
+                <a
+                  href={`#${id}`}
+                  className={styles.link}
+                  aria-current={active === id ? 'location' : undefined}
+                  onClick={() => setOpen(false)}
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <div className={styles.actions}>
+            <Button variant="ghost" href={RESUME_URL} download>
+              Résumé <Icon name="download" />
+            </Button>
+            <button
+              ref={toggleRef}
+              type="button"
+              className={styles.toggle}
+              aria-expanded={open}
+              aria-controls="nav-menu"
+              aria-label={open ? 'Close menu' : 'Open menu'}
+              onClick={() => setOpen((isOpen) => !isOpen)}
+            >
+              <Icon name={open ? 'x' : 'menu'} size={20} />
+            </button>
+          </div>
+        </Container>
+      </nav>
+    </header>
   )
 }
 

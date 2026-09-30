@@ -1,0 +1,26 @@
+/* Off-screen until it gets keyboard focus */
+.skip {
+  position: fixed;
+  top: var(--space-3);
+  left: var(--space-3);
+  z-index: 30;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-accent);
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-on-accent);
+  text-decoration: none;
+  transform: translateY(calc(-100% - var(--space-4)));
+}
+
+.skip:focus {
+  transform: none;
+}
+
+.skip:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
