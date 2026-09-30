@@ -30,10 +30,6 @@ export default defineConfig([
     },
   },
   {
-    files: ['**/*.test.{js,jsx}', 'src/setupTests.js'],
-    languageOptions: { globals: globals.jest },
-  },
-  {
     files: ['*.config.js'],
     languageOptions: { globals: globals.node },
   },

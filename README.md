@@ -16,7 +16,7 @@ My personal site: one page with my projects, work experience, skills and educati
 
 ## Run it locally
 
-You need Node.js 22 (the version is pinned in `.nvmrc`).
+You need Node.js 22.22.2 or newer. `.nvmrc` pins Node 22, so `nvm install` gets the latest 22.
 
 ```bash
 nvm install            # or install Node.js 22 another way
@@ -33,6 +33,8 @@ Without the EmailJS IDs everything works except sending the form. It then shows 
 | `npm run build`        | Build the production site into `dist/`      |
 | `npm run preview`      | Serve the `dist/` build locally             |
 | `npm run lint`         | Run ESLint; any warning fails               |
+| `npm test`             | Run the tests once (Vitest)                 |
+| `npm run test:watch`   | Re-run the tests as files change            |
 | `npm run format`       | Format the code with Prettier               |
 | `npm run format:check` | Check the formatting without changing files |
 
