@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Ammar Daham — portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My personal site: one page with my projects, work experience, skills and education, a downloadable CV and a contact form. I'm a full-stack engineer in Helsinki, and I build web tools with JavaScript, TypeScript and Java.
 
-## Available Scripts
+**Live site:** https://ammardaham.netlify.app
 
-In the project directory, you can run:
+![The portfolio's first screen in a desktop browser and on a phone](.github/screenshot.png)
 
-### `npm start`
+## Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React 18** and **Vite 8**, with no UI framework
+- **CSS Modules** on a small set of design tokens (`src/styles/tokens.css`), with self-hosted Inter and JetBrains Mono fonts from Fontsource
+- **EmailJS** sends the contact form, so there is no backend to run
+- **ESLint 9** (including `jsx-a11y`) and **Prettier**
+- Hosted on **Netlify**, with a deploy preview for every pull request
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Run it locally
 
-### `npm test`
+You need Node.js 22 (the version is pinned in `.nvmrc`).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+nvm install            # or install Node.js 22 another way
+npm ci
+cp .env.example .env   # then add your EmailJS IDs, see "Contact form"
+npm run dev            # http://localhost:5173
+```
 
-### `npm run build`
+Without the EmailJS IDs everything works except sending the form. It then shows its error message with a link to email me directly.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Command                | What it does                                |
+| ---------------------- | ------------------------------------------- |
+| `npm run dev`          | Start the dev server with hot reload        |
+| `npm run build`        | Build the production site into `dist/`      |
+| `npm run preview`      | Serve the `dist/` build locally             |
+| `npm run lint`         | Run ESLint; any warning fails               |
+| `npm run format`       | Format the code with Prettier               |
+| `npm run format:check` | Check the formatting without changing files |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Where things live
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```text
+src/
+  data/           the content: profile, projects, experience, skills, education
+  components/     one component per page section (Hero, Projects, Contact…)
+  components/ui/  shared building blocks: Section, Button, Card, Tag, Icon
+  hooks/          useActiveSection, which highlights the current section in the navbar
+  styles/         design tokens and base styles
+  dev/            /ui.html, a dev-only preview of the building blocks
+resume/cv.html    the source of public/Ammar-Daham-CV.pdf
+```
 
-### `npm run eject`
+**Content:** the profile, projects, jobs, skills and education live in `src/data/`, and the sections render from those files. Section headings are in the components.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**CV:** to rebuild the PDF, open `resume/cv.html` in Chrome and choose Print → Save as PDF with paper size A4, margins "None" and "Background graphics" on. Save it over `public/Ammar-Daham-CV.pdf`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contact form
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The form sends messages through [EmailJS](https://www.emailjs.com/). To set it up:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. In EmailJS, connect an email service and create a template. The template receives `name`, `email`, `reply_to`, `subject` and `message` (also sent as `description`, for older templates).
+2. Put the service ID, template ID and public key in `.env` as `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID` and `VITE_EMAILJS_PUBLIC_KEY`. On Netlify, set the same variables under **Site configuration → Environment variables**.
+3. In the EmailJS dashboard, limit the allowed origins to the site's domains. These IDs end up in the public JavaScript, so the allowlist is what stops others from using them.
 
-## Learn More
+## Deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Netlify builds `main` with the settings in `netlify.toml` (`npm run build`, publishing `dist/`) and the Node.js version from `.nvmrc`.
