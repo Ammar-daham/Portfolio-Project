@@ -18,6 +18,31 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
 
+    <!-- Start the hero portrait (the LCP element) before the JS renders it -->
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      href="/src/ammar.webp"
+      fetchpriority="high"
+    />
+    <!-- Both fonts appear above the fold. Fetching them with the JS, rather
+         than once React renders text, avoids a visible font swap -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/node_modules/@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2"
+      crossorigin
+    />
+
     <!-- Link previews (LinkedIn, Slack, X…) -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Ammar Daham" />
