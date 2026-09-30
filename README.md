@@ -47,7 +47,8 @@ src/
   data/           the content: profile, projects, experience, skills, education
   components/     one component per page section (Hero, Projects, Contact…)
   components/ui/  shared building blocks: Section, Button, Card, Tag, Icon
-  hooks/          useActiveSection, which highlights the current section in the navbar
+  hooks/          useActiveSection (highlights the current section in the navbar)
+                  and useTheme (light and dark theme)
   styles/         design tokens and base styles
   dev/            /ui.html, a dev-only preview of the building blocks
 tests/            Vitest tests, one file per section; setup.js loads jest-dom

@@ -11,7 +11,29 @@
     <!-- The site URL also appears in public/robots.txt and public/sitemap.xml -->
     <link rel="canonical" href="https://ammardaham.netlify.app/" />
     <meta name="theme-color" content="#0b0d10" />
-    <meta name="color-scheme" content="dark" />
+    <meta name="color-scheme" content="dark light" />
+    <!-- Apply the saved (or the system's) theme before the first paint, so
+         there's no flash of the wrong one. Keep in sync with useTheme.js -->
+    <script>
+      ;(function () {
+        var theme = null
+        try {
+          theme = localStorage.getItem('theme')
+        } catch (e) {
+          // Storage can be blocked; fall back to the system setting
+        }
+        if (theme !== 'light' && theme !== 'dark') {
+          var light = window.matchMedia
+            ? window.matchMedia('(prefers-color-scheme: light)').matches
+            : false
+          theme = light ? 'light' : 'dark'
+        }
+        document.documentElement.dataset.theme = theme
+        document
+          .querySelector('meta[name="theme-color"]')
+          .setAttribute('content', theme === 'light' ? '#f7f8fa' : '#0b0d10')
+      })()
+    </script>
 
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />

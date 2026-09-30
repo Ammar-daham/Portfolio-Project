@@ -13,7 +13,7 @@
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   line-height: var(--leading-normal);
-  color: var(--color-accent);
+  color: var(--color-accent-text);
 }
 
 /* Tight line-height for wrapped titles. The extra space above (padding, so

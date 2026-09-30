@@ -31,5 +31,5 @@
 .core {
   border-color: rgb(245 165 36 / 0.5);
   background: var(--color-accent-soft);
-  color: var(--color-accent);
+  color: var(--color-accent-text);
 }

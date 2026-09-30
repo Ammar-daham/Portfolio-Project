@@ -3,7 +3,7 @@
   top: 0;
   z-index: 20;
   border-bottom: 1px solid var(--color-border);
-  background: rgb(11 13 16 / 0.8);
+  background: var(--color-nav-bg);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   color: var(--color-text);
@@ -68,12 +68,12 @@
   left: 0;
   height: 2px;
   border-radius: 2px;
-  background: var(--color-accent);
+  background: var(--color-accent-text);
 }
 
 .logo:focus-visible,
 .link:focus-visible,
-.toggle:focus-visible {
+.iconButton:focus-visible {
   outline: none;
   border-radius: var(--radius-xs);
   box-shadow: var(--focus-ring);
@@ -85,8 +85,10 @@
   gap: var(--space-3);
 }
 
-.toggle {
-  display: none;
+/* Square icon buttons: the theme switch, and the menu button on mobile */
+.iconButton {
+  display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   width: 2.5rem;
@@ -97,10 +99,28 @@
   background: var(--color-surface);
   color: var(--color-text);
   cursor: pointer;
+  transition:
+    background-color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out);
 }
 
-.toggle:focus-visible {
+.iconButton:hover {
+  border-color: var(--color-border-strong);
+  background: var(--color-surface-2);
+}
+
+.iconButton:focus-visible {
   border-radius: var(--radius-md);
+}
+
+.toggle {
+  display: none;
+}
+
+/* The theme switch sits in the bar on desktop, and at the bottom of the
+   menu on mobile, where the bar has no room for a third button */
+.themeItem {
+  display: none;
 }
 
 @media (max-width: 900px) {
@@ -148,10 +168,46 @@
   }
 
   .link[aria-current] {
-    color: var(--color-accent);
+    color: var(--color-accent-text);
   }
 
   .link[aria-current]::after {
     display: none;
+  }
+
+  .themeBar {
+    display: none;
+  }
+
+  .themeItem {
+    display: block;
+  }
+
+  .themeRow {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    width: 100%;
+    margin: 0;
+    padding: var(--space-3) 0;
+    border: 0;
+    background: none;
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: 1.25;
+    color: var(--color-muted);
+    text-align: left;
+    cursor: pointer;
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+
+  .themeRow:hover {
+    color: var(--color-text);
+  }
+
+  .themeRow:focus-visible {
+    outline: none;
+    border-radius: var(--radius-xs);
+    box-shadow: var(--focus-ring);
   }
 }

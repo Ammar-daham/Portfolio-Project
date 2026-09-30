@@ -41,7 +41,7 @@
 }
 
 .role span {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
 }
 
 /* list-style-type: nested lists inside the <ol> default to hollow circles */
