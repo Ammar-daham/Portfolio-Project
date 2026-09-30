@@ -1,5 +1,7 @@
 # Ammar Daham — portfolio
 
+[![CI](https://github.com/Ammar-daham/Portfolio-Project/actions/workflows/ci.yml/badge.svg)](https://github.com/Ammar-daham/Portfolio-Project/actions/workflows/ci.yml)
+
 My personal site: one page with my projects, work experience, skills and education, a downloadable CV and a contact form. I'm a full-stack engineer in Helsinki, and I build web tools with JavaScript, TypeScript and Java.
 
 **Live site:** https://ammardaham.netlify.app
@@ -63,6 +65,14 @@ The form sends messages through [EmailJS](https://www.emailjs.com/). To set it u
 1. In EmailJS, connect an email service and create a template. The template receives `name`, `email`, `reply_to`, `subject` and `message` (also sent as `description`, for older templates).
 2. Put the service ID, template ID and public key in `.env` as `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID` and `VITE_EMAILJS_PUBLIC_KEY`. On Netlify, set the same variables under **Site configuration → Environment variables**.
 3. In the EmailJS dashboard, limit the allowed origins to the site's domains. These IDs end up in the public JavaScript, so the allowlist is what stops others from using them.
+
+## Checks
+
+Every pull request, and `main` after each merge, runs [GitHub Actions](.github/workflows/ci.yml) on the Node.js version from `.nvmrc`: `npm ci`, lint, the formatting check, the tests and the build. Run the same checks locally before pushing:
+
+```bash
+npm run lint && npm run format:check && npm test && npm run build
+```
 
 ## Deployment
 
