@@ -1,7 +1,7 @@
 import { render, screen, within } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import { certifications, education } from '../data/education'
-import Education from './Education'
+import { certifications, education } from '../src/data/education'
+import Education from '../src/components/Education'
 
 describe('Education', () => {
   it.each(education.map((study) => [study.title, study]))(

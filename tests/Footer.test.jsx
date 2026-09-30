@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import { profile } from '../data/profile'
-import Footer from './Footer'
+import { profile } from '../src/data/profile'
+import Footer from '../src/components/Footer'
 
 describe('Footer', () => {
   it('shows this year, my name and the credit line', () => {

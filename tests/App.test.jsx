@@ -1,7 +1,7 @@
 import { render, screen, within } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import App from './App'
-import { profile } from './data/profile'
+import App from '../src/App'
+import { profile } from '../src/data/profile'
 
 describe('App', () => {
   it('renders the hero heading with my name', () => {

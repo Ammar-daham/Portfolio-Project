@@ -1,7 +1,7 @@
 import { act, render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, expect, it } from 'vitest'
-import Navbar from './Navbar'
+import Navbar from '../src/components/Navbar'
 
 const SECTIONS = [
   ['Home', '#home'],

@@ -1,7 +1,7 @@
 import { render, screen, within } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import { projects } from '../data/projects'
-import Projects from './Projects'
+import { projects } from '../src/data/projects'
+import Projects from '../src/components/Projects'
 
 const LINK_LABELS = { demo: 'Live demo', code: 'Code', api: 'API code' }
 

@@ -1,7 +1,7 @@
 import { render, screen, within } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import { skillGroups } from '../data/skills'
-import Skills from './Skills'
+import { skillGroups } from '../src/data/skills'
+import Skills from '../src/components/Skills'
 
 describe('Skills', () => {
   it.each(skillGroups.map((group) => [group.title, group]))(

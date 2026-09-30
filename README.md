@@ -48,6 +48,7 @@ src/
   hooks/          useActiveSection, which highlights the current section in the navbar
   styles/         design tokens and base styles
   dev/            /ui.html, a dev-only preview of the building blocks
+tests/            Vitest tests, one file per section; setup.js loads jest-dom
 resume/cv.html    the source of public/Ammar-Daham-CV.pdf
 ```
 

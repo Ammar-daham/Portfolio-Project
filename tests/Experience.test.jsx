@@ -1,7 +1,7 @@
 import { render, screen, within } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import { experience } from '../data/experience'
-import Experience from './Experience'
+import { experience } from '../src/data/experience'
+import Experience from '../src/components/Experience'
 
 const role = (job) => `${job.title} @ ${job.company}`
 
