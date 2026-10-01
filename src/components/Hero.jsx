@@ -1,6 +1,6 @@
 import { useId } from 'react'
 import portrait from '../ammar.webp'
-import { profile } from '../data/profile'
+import { useContent } from '../i18n'
 import Button from './ui/Button'
 import Container from './ui/Container'
 import Icon from './ui/Icon'
@@ -16,13 +16,15 @@ const yearsSince = (yearMonth) => {
 }
 
 const Hero = () => {
+  const { profile, ui } = useContent()
+  const t = ui.hero
   const { hero, links, email, name, role, location } = profile
   const years = yearsSince(profile.fullStackSince)
   const titleId = useId()
   const socials = [
     { label: 'GitHub', href: links.github, external: true },
     { label: 'LinkedIn', href: links.linkedin, external: true },
-    { label: 'Email', href: `mailto:${email}` },
+    { label: t.email, href: `mailto:${email}` },
   ]
 
   return (
@@ -43,10 +45,10 @@ const Hero = () => {
           <p className={styles.lead}>{hero.lead}</p>
           <div className={styles.ctas}>
             <Button href="#projects">
-              View my work <Icon name="arrow-right" />
+              {t.viewWork} <Icon name="arrow-right" />
             </Button>
             <Button variant="ghost" href="#contact">
-              Get in touch
+              {t.getInTouch}
             </Button>
           </div>
           <ul className={styles.socials}>
@@ -67,14 +69,14 @@ const Hero = () => {
           <div className={styles.tile}>
             <img
               src={portrait}
-              alt={`Portrait of ${name}`}
+              alt={t.portraitAlt(name)}
               width="800"
               height="800"
             />
           </div>
           {years > 0 && (
             <p className={styles.stat}>
-              <strong>{years}+ yrs</strong> full-stack experience
+              <strong>{t.years(years)}</strong> {t.experience}
             </p>
           )}
         </div>

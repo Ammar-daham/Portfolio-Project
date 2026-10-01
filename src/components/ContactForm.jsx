@@ -1,6 +1,6 @@
 import { useId, useState } from 'react'
 import emailjs from '@emailjs/browser'
-import { profile } from '../data/profile'
+import { useContent } from '../i18n'
 import Button from './ui/Button'
 import Card from './ui/Card'
 import Icon from './ui/Icon'
@@ -19,21 +19,20 @@ const FIELDS = ['name', 'email', 'message']
 // `website` is the honeypot: hidden from people, but bots fill it in
 const EMPTY = { name: '', email: '', message: '', website: '' }
 
-const VALIDATE = {
-  name: (value) => (value.trim() ? '' : 'Please enter your name.'),
+// Each returns the field's error message, or '' when it's valid
+const validators = (messages) => ({
+  name: (value) => (value.trim() ? '' : messages.nameRequired),
   email: (value) => {
-    if (!value.trim()) return 'Please enter your email.'
-    return /^\S+@\S+\.\S+$/.test(value.trim())
-      ? ''
-      : 'Please enter a valid email, like jane@company.com.'
+    if (!value.trim()) return messages.emailRequired
+    return /^\S+@\S+\.\S+$/.test(value.trim()) ? '' : messages.emailInvalid
   },
-  message: (value) => (value.trim() ? '' : 'Please write a message.'),
-}
+  message: (value) => (value.trim() ? '' : messages.messageRequired),
+})
 
 // Opens the visitor's mail app with their message filled in
-const mailto = ({ name, message }) =>
-  `mailto:${profile.email}?subject=${encodeURIComponent(
-    `Portfolio contact from ${name.trim()}`,
+const mailto = (to, subject, { name, message }) =>
+  `mailto:${to}?subject=${encodeURIComponent(
+    subject(name.trim()),
   )}&body=${encodeURIComponent(message)}`
 
 const Field = ({ label, error, multiline = false, ...props }) => {
@@ -62,6 +61,9 @@ const Field = ({ label, error, multiline = false, ...props }) => {
 }
 
 const ContactForm = () => {
+  const { profile, ui } = useContent()
+  const t = ui.form
+  const validate = validators(t.errors)
   const honeypotId = useId()
   const [values, setValues] = useState(EMPTY)
   const [errors, setErrors] = useState({})
@@ -74,7 +76,7 @@ const ContactForm = () => {
     setValues((current) => ({ ...current, [name]: value }))
     // Once a field shows an error, re-check it as the visitor types
     if (errors[name]) {
-      setErrors((current) => ({ ...current, [name]: VALIDATE[name](value) }))
+      setErrors((current) => ({ ...current, [name]: validate[name](value) }))
     }
     if (status === 'sent') setStatus('idle')
   }
@@ -85,7 +87,7 @@ const ContactForm = () => {
 
     const found = {}
     for (const field of FIELDS) {
-      const error = VALIDATE[field](values[field])
+      const error = validate[field](values[field])
       if (error) found[field] = error
     }
     setErrors(found)
@@ -114,7 +116,7 @@ const ContactForm = () => {
           name,
           email,
           reply_to: email,
-          subject: `Portfolio contact from ${name}`,
+          subject: t.subject(name),
           message: values.message,
           // The EmailJS template still reads the old form's field name
           description: values.message,
@@ -133,11 +135,11 @@ const ContactForm = () => {
     <Card as="form" className={styles.form} onSubmit={onSubmit} noValidate>
       <div className={styles.row}>
         <Field
-          label="Name"
+          label={t.name}
           name="name"
           type="text"
           autoComplete="name"
-          placeholder="Jane Doe"
+          placeholder={t.placeholders.name}
           maxLength={100}
           required
           value={values.name}
@@ -145,11 +147,11 @@ const ContactForm = () => {
           error={errors.name}
         />
         <Field
-          label="Email"
+          label={t.email}
           name="email"
           type="email"
           autoComplete="email"
-          placeholder="jane@company.com"
+          placeholder={t.placeholders.email}
           maxLength={254}
           required
           value={values.email}
@@ -158,11 +160,11 @@ const ContactForm = () => {
         />
       </div>
       <Field
-        label="Message"
+        label={t.message}
         name="message"
         multiline
         rows={5}
-        placeholder="Tell me about your project or role…"
+        placeholder={t.placeholders.message}
         maxLength={5000}
         required
         value={values.message}
@@ -170,7 +172,7 @@ const ContactForm = () => {
         error={errors.message}
       />
       <div className={styles.honeypot} aria-hidden="true">
-        <label htmlFor={honeypotId}>Leave this field empty</label>
+        <label htmlFor={honeypotId}>{t.honeypot}</label>
         <input
           id={honeypotId}
           name="website"
@@ -188,22 +190,25 @@ const ContactForm = () => {
           className={styles.submit}
           aria-disabled={sending || undefined}
         >
-          {sending ? 'Sending…' : 'Send message'}
+          {sending ? t.sending : t.send}
         </Button>
         <div role="status" aria-live="polite">
           {status === 'sent' && (
             <p className={`${styles.status} ${styles.sent}`}>
               <Icon name="check-circle" className={styles.statusIcon} />
-              <span>Thanks! Your message is on its way. I’ll reply soon.</span>
+              <span>{t.sent}</span>
             </p>
           )}
           {status === 'error' && (
             <p className={`${styles.status} ${styles.failed}`}>
               <Icon name="alert-circle" className={styles.statusIcon} />
               <span>
-                Sorry, your message couldn’t be sent. Please try again, or{' '}
-                <a className={styles.statusLink} href={mailto(values)}>
-                  email me directly
+                {t.failed}{' '}
+                <a
+                  className={styles.statusLink}
+                  href={mailto(profile.email, t.subject, values)}
+                >
+                  {t.failedLink}
                 </a>
                 .
               </span>

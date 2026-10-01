@@ -1,25 +1,26 @@
 import { useEffect, useRef, useState } from 'react'
-import { profile } from '../data/profile'
 import { useActiveSection } from '../hooks/useActiveSection'
+import { useContent } from '../i18n'
 import { useTheme } from '../hooks/useTheme'
 import Button from './ui/Button'
 import Container from './ui/Container'
 import Icon from './ui/Icon'
 import styles from './Navbar.module.css'
 
-const LINKS = [
-  { id: 'home', label: 'Home' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'experience', label: 'Experience' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'education', label: 'Education' },
-  { id: 'contact', label: 'Contact' },
+const SECTION_IDS = [
+  'home',
+  'projects',
+  'experience',
+  'skills',
+  'education',
+  'contact',
 ]
-const SECTION_IDS = LINKS.map((link) => link.id)
 const RESUME_URL = '/Ammar-Daham-CV.pdf'
 const DESKTOP = '(min-width: 901px)'
 
 const Navbar = () => {
+  const { profile, ui } = useContent()
+  const t = ui.nav
   const [open, setOpen] = useState(false)
   const active = useActiveSection(SECTION_IDS)
   const [theme, toggleTheme] = useTheme()
@@ -62,12 +63,12 @@ const Navbar = () => {
 
   return (
     <header ref={headerRef} className={styles.nav}>
-      <nav aria-label="Main">
+      <nav aria-label={t.label}>
         <Container className={styles.bar}>
           <a
             href="#home"
             className={styles.logo}
-            aria-label={`${profile.name}, back to top`}
+            aria-label={t.backToTop(profile.name)}
           >
             {first}
             <span>.</span>
@@ -79,7 +80,7 @@ const Navbar = () => {
             id="nav-menu"
             className={`${styles.links} ${open ? styles.open : ''}`.trim()}
           >
-            {LINKS.map(({ id, label }) => (
+            {SECTION_IDS.map((id) => (
               <li key={id}>
                 <a
                   href={`#${id}`}
@@ -87,7 +88,7 @@ const Navbar = () => {
                   aria-current={active === id ? 'location' : undefined}
                   onClick={() => setOpen(false)}
                 >
-                  {label}
+                  {t.links[id]}
                 </a>
               </li>
             ))}
@@ -98,7 +99,7 @@ const Navbar = () => {
                 onClick={toggleTheme}
               >
                 <Icon name={nextTheme === 'light' ? 'sun' : 'moon'} />
-                Switch to {nextTheme} theme
+                {t.switchTheme(nextTheme)}
               </button>
             </li>
           </ul>
@@ -107,14 +108,14 @@ const Navbar = () => {
             <button
               type="button"
               className={`${styles.iconButton} ${styles.themeBar}`}
-              aria-label={`Switch to ${nextTheme} theme`}
-              title={`Switch to ${nextTheme} theme`}
+              aria-label={t.switchTheme(nextTheme)}
+              title={t.switchTheme(nextTheme)}
               onClick={toggleTheme}
             >
               <Icon name={nextTheme === 'light' ? 'sun' : 'moon'} size={18} />
             </button>
             <Button variant="ghost" href={RESUME_URL} download>
-              Résumé <Icon name="download" />
+              {t.resume} <Icon name="download" />
             </Button>
             <button
               ref={toggleRef}
@@ -122,7 +123,7 @@ const Navbar = () => {
               className={`${styles.iconButton} ${styles.toggle}`}
               aria-expanded={open}
               aria-controls="nav-menu"
-              aria-label={open ? 'Close menu' : 'Open menu'}
+              aria-label={open ? t.closeMenu : t.openMenu}
               onClick={() => setOpen((isOpen) => !isOpen)}
             >
               <Icon name={open ? 'x' : 'menu'} size={20} />
