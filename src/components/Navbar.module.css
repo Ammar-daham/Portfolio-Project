@@ -117,10 +117,18 @@
   display: none;
 }
 
-/* The theme switch sits in the bar on desktop, and at the bottom of the
-   menu on mobile, where the bar has no room for a third button */
-.themeItem {
+/* The language and theme switches sit in the bar on desktop, and at the
+   bottom of the menu on mobile, where the bar has no room for them */
+.menuOnly {
   display: none;
+}
+
+.language {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
 }
 
 @media (max-width: 900px) {
@@ -175,15 +183,15 @@
     display: none;
   }
 
-  .themeBar {
+  .barOnly {
     display: none;
   }
 
-  .themeItem {
+  .menuOnly {
     display: block;
   }
 
-  .themeRow {
+  .menuRow {
     display: flex;
     align-items: center;
     gap: var(--space-2);
@@ -197,15 +205,16 @@
     line-height: 1.25;
     color: var(--color-muted);
     text-align: left;
+    text-decoration: none;
     cursor: pointer;
     transition: color var(--duration-fast) var(--ease-out);
   }
 
-  .themeRow:hover {
+  .menuRow:hover {
     color: var(--color-text);
   }
 
-  .themeRow:focus-visible {
+  .menuRow:focus-visible {
     outline: none;
     border-radius: var(--radius-xs);
     box-shadow: var(--focus-ring);
