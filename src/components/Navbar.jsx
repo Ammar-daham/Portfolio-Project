@@ -25,6 +25,11 @@ const Navbar = () => {
   const active = useActiveSection(SECTION_IDS)
   const [theme, toggleTheme] = useTheme()
   const nextTheme = theme === 'dark' ? 'light' : 'dark'
+  const other = t.otherLanguage
+  // Keep the visitor's place when switching: /#skills → /fi/#skills
+  const keepSection = (event) => {
+    event.currentTarget.href = other.href + window.location.hash
+  }
   const headerRef = useRef(null)
   const menuRef = useRef(null)
   const toggleRef = useRef(null)
@@ -92,22 +97,45 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <li className={styles.themeItem}>
+            <li className={styles.menuOnly}>
               <button
                 type="button"
-                className={styles.themeRow}
+                className={styles.menuRow}
                 onClick={toggleTheme}
               >
                 <Icon name={nextTheme === 'light' ? 'sun' : 'moon'} />
                 {t.switchTheme(nextTheme)}
               </button>
             </li>
+            <li className={styles.menuOnly}>
+              <a
+                href={other.href}
+                hrefLang={other.lang}
+                lang={other.lang}
+                className={styles.menuRow}
+                onClick={keepSection}
+              >
+                <Icon name="globe" />
+                {other.label}
+              </a>
+            </li>
           </ul>
 
           <div className={styles.actions}>
+            <a
+              href={other.href}
+              hrefLang={other.lang}
+              lang={other.lang}
+              className={`${styles.iconButton} ${styles.barOnly} ${styles.language}`}
+              aria-label={`${other.short} – ${other.label}`}
+              title={other.label}
+              onClick={keepSection}
+            >
+              {other.short}
+            </a>
             <button
               type="button"
-              className={`${styles.iconButton} ${styles.themeBar}`}
+              className={`${styles.iconButton} ${styles.barOnly}`}
               aria-label={t.switchTheme(nextTheme)}
               title={t.switchTheme(nextTheme)}
               onClick={toggleTheme}

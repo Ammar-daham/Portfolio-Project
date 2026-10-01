@@ -2,8 +2,10 @@ import emailjs from '@emailjs/browser'
 import { render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { profile } from '../src/data/profile'
 import ContactForm from '../src/components/ContactForm'
+import { content } from '../src/i18n'
+
+const { profile } = content('en')
 
 vi.mock('@emailjs/browser', () => ({ default: { send: vi.fn() } }))
 

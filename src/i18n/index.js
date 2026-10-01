@@ -7,9 +7,9 @@ import { skillGroups } from '../data/skills'
 import { ui } from '../data/ui'
 
 // Text that changes with the language is written where it's used, as
-// { en: '…' }. Everything else (links, dates, stack names) is written once
-// and shared by every language.
-export const LANGUAGES = ['en']
+// { en: '…', fi: '…' }. Everything else (links, dates, stack names) is
+// written once and shared by every language.
+export const LANGUAGES = ['en', 'fi']
 export const DEFAULT_LANGUAGE = 'en'
 
 const isPlainObject = (value) =>
