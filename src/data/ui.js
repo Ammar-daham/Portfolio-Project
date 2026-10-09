@@ -64,8 +64,8 @@ export const ui = {
     eyebrow: { en: '// 01 — selected work', fi: '// 01 — valittuja töitä' },
     title: { en: 'Projects', fi: 'Projektit' },
     sub: {
-      en: "Things I've built on my own and at Integrify, from a multi-salon booking platform to full-stack apps and REST APIs.",
-      fi: 'Projekteja, jotka olen tehnyt itse ja Integrifyssa: usean salongin ajanvarausalustasta full stack -sovelluksiin ja REST-rajapintoihin.',
+      en: "Things I've built on my own and at Integrify, from a multi-salon booking platform to a full-stack library app.",
+      fi: 'Projekteja, jotka olen tehnyt itse ja Integrifyssa: usean salongin ajanvarausalustasta full stack -kirjastosovellukseen.',
     },
     links: {
       demo: { en: 'Live demo', fi: 'Demo' },
@@ -183,13 +183,6 @@ export const ui = {
     subject: {
       en: (name) => `Portfolio contact from ${name}`,
       fi: (name) => `Yhteydenotto portfoliosta: ${name}`,
-    },
-  },
-
-  footer: {
-    credit: {
-      en: 'Built with React + Vite · Hosted on Netlify',
-      fi: 'Tehty Reactilla ja Vitellä · Julkaistu Netlifyssä',
     },
   },
 }
