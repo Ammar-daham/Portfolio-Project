@@ -18,6 +18,10 @@
 }
 
 .logo {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.625rem;
   font-family: var(--font-mono);
   font-size: var(--text-lg);
   font-weight: 500;
@@ -30,7 +34,17 @@
   color: var(--color-text);
 }
 
-.logo span {
+.mark {
+  width: 1.75rem;
+  height: 1.5rem;
+  fill: currentColor;
+}
+
+.mark circle {
+  fill: var(--color-accent);
+}
+
+.wordmark span {
   color: var(--color-accent);
 }
 
@@ -218,5 +232,14 @@
     outline: none;
     border-radius: var(--radius-xs);
     box-shadow: var(--focus-ring);
+  }
+}
+
+/* Narrow phones have no room for the name next to the buttons, so the mark
+   stands alone. The hero shows the name just below, and the link keeps it
+   in its label */
+@media (max-width: 420px) {
+  .wordmark {
+    display: none;
   }
 }
