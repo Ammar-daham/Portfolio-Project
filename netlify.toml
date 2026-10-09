@@ -11,3 +11,11 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# The site moved to ammardaham.fi. Old links and search results on the
+# Netlify address go to the same page there (/fi/, the CV PDF, …).
+[[redirects]]
+  from = "https://ammardaham.netlify.app/*"
+  to = "https://ammardaham.fi/:splat"
+  status = 301
+  force = true
