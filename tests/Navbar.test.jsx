@@ -47,6 +47,17 @@ describe('Navbar', () => {
     )
   })
 
+  it('links the logo to the top, with the mark hidden from screen readers', () => {
+    const { nav } = setup()
+
+    const logo = within(nav).getByRole('link', {
+      name: 'Ammar Daham, back to top',
+    })
+    expect(logo).toHaveAttribute('href', '#home')
+    expect(logo).toHaveTextContent('ammar.daham')
+    expect(logo.querySelector('svg')).toHaveAttribute('aria-hidden', 'true')
+  })
+
   it('offers the CV as a download', () => {
     const { nav } = setup()
 

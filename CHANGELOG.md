@@ -14,6 +14,9 @@ All notable changes to this site are listed here. The format follows
 - A Finnish version of the site at `/fi/`, with its own title, description
   and link preview. A switch in the navbar (in the menu on phones) moves
   between English and Finnish and keeps your place on the page.
+- A logo: an A with the amber dot as its crossbar. It sits next to the name
+  in the navbar (on its own on narrow phones) and replaces the "a." favicon
+  and app icons.
 
 ### Removed
 
