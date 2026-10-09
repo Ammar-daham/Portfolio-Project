@@ -4,7 +4,7 @@
 
 My personal site: one page with my projects, work experience, skills and education, a downloadable CV and a contact form. I'm a software engineer in Helsinki, and I build web tools with JavaScript, TypeScript and Java.
 
-**Live site:** https://ammardaham.netlify.app
+**Live site:** https://ammardaham.fi/
 
 ![The portfolio's first screen in a desktop browser and on a phone](.github/screenshot.png)
 

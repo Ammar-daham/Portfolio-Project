@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://ammardaham.netlify.app/sitemap.xml
+Sitemap: https://ammardaham.fi/sitemap.xml

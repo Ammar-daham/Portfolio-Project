@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest'
 
 // fi/index.html is index.html in Finnish. The two must keep the same tags,
 // scripts and links; only the text, the language and their URLs differ.
-const SITE = 'https://ammardaham.netlify.app'
+const SITE = 'https://ammardaham.fi'
 // Paths are relative to the project root, where Vitest runs
 const read = (path) => readFileSync(path)
 const parse = (path) =>
