@@ -2,7 +2,7 @@ export const experience = [
   {
     start: '2023-06',
     end: null,
-    title: { en: 'Full-stack Engineer', fi: 'Full stack -ohjelmistokehittäjä' },
+    title: { en: 'Software Engineer', fi: 'Ohjelmistokehittäjä' },
     company: 'Air Dice Oy',
     highlights: [
       {

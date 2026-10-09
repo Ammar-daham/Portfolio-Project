@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/Ammar-daham/Portfolio-Project/actions/workflows/ci.yml/badge.svg)](https://github.com/Ammar-daham/Portfolio-Project/actions/workflows/ci.yml)
 
-My personal site: one page with my projects, work experience, skills and education, a downloadable CV and a contact form. I'm a full-stack engineer in Helsinki, and I build web tools with JavaScript, TypeScript and Java.
+My personal site: one page with my projects, work experience, skills and education, a downloadable CV and a contact form. I'm a software engineer in Helsinki, and I build web tools with JavaScript, TypeScript and Java.
 
 **Live site:** https://ammardaham.netlify.app
 
