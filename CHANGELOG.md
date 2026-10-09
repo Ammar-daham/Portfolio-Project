@@ -15,6 +15,10 @@ All notable changes to this site are listed here. The format follows
   and link preview. A switch in the navbar (in the menu on phones) moves
   between English and Finnish and keeps your place on the page.
 
+### Removed
+
+- The "Built with React + Vite · Hosted on Netlify" line in the footer.
+
 ## [1.0.0] - 2026-09-30
 
 Initial release.

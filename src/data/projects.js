@@ -50,36 +50,10 @@ export const projects = [
       { en: 'Google sign-in', fi: 'Google-kirjautuminen' },
       'Docker',
     ],
+    status: { en: 'In progress', fi: 'Työn alla' },
     links: {
       demo: 'https://imaginary-library.fly.dev/',
       code: 'https://github.com/Ammar-daham/library-system',
-    },
-    image: null,
-  },
-  {
-    id: 'blog-post-app',
-    title: { en: 'Blog Post App', fi: 'Blogisovellus' },
-    pitch: {
-      en: "A full-stack blogging app where users sign up, write and edit posts, and like and comment on each other's posts.",
-      fi: 'Full stack -blogisovellus, jossa käyttäjät rekisteröityvät, kirjoittavat ja muokkaavat julkaisuja sekä tykkäävät ja kommentoivat toistensa julkaisuja.',
-    },
-    role: {
-      en: 'Solo project: React client and REST API',
-      fi: 'Oma projekti: React-käyttöliittymä ja REST-rajapinta',
-    },
-    stack: [
-      'React',
-      'Redux Toolkit',
-      'Bootstrap',
-      'Node.js',
-      'Express',
-      'MongoDB',
-      'JWT',
-    ],
-    links: {
-      demo: 'https://summer-water-4667.fly.dev/',
-      code: 'https://github.com/Ammar-daham/blog-post-client',
-      api: 'https://github.com/Ammar-daham/blog-post-api',
     },
     image: null,
   },
@@ -97,17 +71,5 @@ export const projects = [
       code: 'https://github.com/Ammar-daham/todolist',
     },
     image: todoApp,
-  },
-  {
-    id: 'currency-exchange-api',
-    title: { en: 'Currency Exchange API', fi: 'Valuuttakurssi-API' },
-    pitch: {
-      en: 'A Spring Boot REST API that returns exchange rates between currencies from an external rate service.',
-      fi: 'Spring Bootilla tehty REST-rajapinta, joka hakee valuuttojen väliset vaihtokurssit ulkoisesta kurssipalvelusta.',
-    },
-    role: { en: 'Solo project', fi: 'Oma projekti' },
-    stack: ['Java 17', 'Spring Boot', 'Quartz', 'Maven', 'Docker'],
-    links: { code: 'https://github.com/Ammar-daham/currency-exchange-api' },
-    image: null,
   },
 ]
