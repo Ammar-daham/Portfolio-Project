@@ -2,11 +2,20 @@ export const education = [
   {
     start: '2020',
     end: '2024',
-    title: 'Bachelor of Engineering in Information Technology',
-    school: 'Metropolia University of Applied Sciences',
-    thesis: 'Promotional tool for iGaming',
+    title: {
+      en: 'Bachelor of Engineering in Information Technology',
+      fi: 'Insinööri (AMK), tieto- ja viestintätekniikka',
+    },
+    school: {
+      en: 'Metropolia University of Applied Sciences',
+      fi: 'Metropolia Ammattikorkeakoulu',
+    },
+    thesis: {
+      en: 'Promotional tool for iGaming',
+      fi: 'Markkinointityökalu iGaming-alalle',
+    },
     link: {
-      label: 'Read the thesis',
+      label: { en: 'Read the thesis', fi: 'Lue opinnäytetyö' },
       title: 'Free Spins giveaway',
       href: 'https://urn.fi/URN:NBN:fi:amk-202403255121',
     },
@@ -14,27 +23,52 @@ export const education = [
   {
     start: '2022',
     end: '2022',
-    title: 'Exchange in big data and machine learning',
+    title: {
+      en: 'Exchange in big data and machine learning',
+      fi: 'Vaihto-opiskelu: big data ja koneoppiminen',
+    },
     school: 'Amsterdam University of Applied Sciences',
     projects: [
-      'Sentiment analysis of hotel reviews',
-      'A model that predicts wildfires in Australia',
+      {
+        en: 'Sentiment analysis of hotel reviews',
+        fi: 'Hotelliarvostelujen sentimenttianalyysi',
+      },
+      {
+        en: 'A model that predicts wildfires in Australia',
+        fi: 'Malli, joka ennustaa maastopaloja Australiassa',
+      },
     ],
   },
   {
     start: '2018',
     end: '2020',
-    title:
-      'Vocational qualification in Information and Communications Technology',
-    school: 'Omnia Vocational School',
-    projects: ['Two online-shop websites, built with React and WordPress'],
+    title: {
+      en: 'Vocational qualification in Information and Communications Technology',
+      fi: 'Tieto- ja viestintätekniikan perustutkinto',
+    },
+    school: { en: 'Omnia Vocational School', fi: 'Ammattiopisto Omnia' },
+    projects: [
+      {
+        en: 'Two online-shop websites, built with React and WordPress',
+        fi: 'Kaksi verkkokauppasivustoa, tehty Reactilla ja WordPressillä',
+      },
+    ],
   },
   {
     start: '2007',
     end: '2011',
-    title: 'Bachelor of Science in Computers and Mathematics',
-    school: 'University of Mosul, College of Education',
-    thesis: 'Image processing using filters',
+    title: {
+      en: 'Bachelor of Science in Computers and Mathematics',
+      fi: 'Luonnontieteiden kandidaatti, tietojenkäsittely ja matematiikka',
+    },
+    school: {
+      en: 'University of Mosul, College of Education',
+      fi: 'Mosulin yliopisto, kasvatustieteellinen tiedekunta',
+    },
+    thesis: {
+      en: 'Image processing using filters',
+      fi: 'Kuvankäsittely suodattimilla',
+    },
   },
 ]
 
@@ -44,5 +78,11 @@ export const certifications = [
     issuer: 'Scrum Alliance',
     date: '2019-12-26',
   },
-  { name: 'Certificate of privacy education', date: '2019-03-17' },
+  {
+    name: {
+      en: 'Certificate of privacy education',
+      fi: 'Tietosuojakoulutuksen todistus',
+    },
+    date: '2019-03-17',
+  },
 ]

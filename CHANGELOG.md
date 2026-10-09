@@ -11,6 +11,9 @@ All notable changes to this site are listed here. The format follows
 - A light theme. The site follows the system's light or dark setting, and a
   switch in the navbar (in the menu on phones) changes it. A choice that
   differs from the system is remembered.
+- A Finnish version of the site at `/fi/`, with its own title, description
+  and link preview. A switch in the navbar (in the menu on phones) moves
+  between English and Finnish and keeps your place on the page.
 
 ## [1.0.0] - 2026-09-30
 

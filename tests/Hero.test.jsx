@@ -1,7 +1,9 @@
 import { render, screen, within } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { profile } from '../src/data/profile'
 import Hero from '../src/components/Hero'
+import { content } from '../src/i18n'
+
+const { profile } = content('en')
 
 // Freeze the clock at the 15th of a month, `years` after fullStackSince
 const atYearsSince = (years, monthOffset = 0) => {

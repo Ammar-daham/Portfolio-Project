@@ -25,7 +25,8 @@ const setup = () => {
     user,
     nav,
     toggle: within(nav).getByRole('button', { name: /menu/i }),
-    links: within(nav).getByRole('list').querySelectorAll('a'),
+    // The section links; the menu also holds the theme and language switches
+    links: within(nav).getByRole('list').querySelectorAll('a[href^="#"]'),
   }
 }
 
@@ -33,7 +34,9 @@ describe('Navbar', () => {
   it('links to every section and marks the current one', () => {
     const { nav } = setup()
 
-    const links = [...within(nav).getByRole('list').querySelectorAll('a')]
+    const links = [
+      ...within(nav).getByRole('list').querySelectorAll('a[href^="#"]'),
+    ]
     expect(
       links.map((link) => [link.textContent, link.getAttribute('href')]),
     ).toEqual(SECTIONS)

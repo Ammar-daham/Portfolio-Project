@@ -44,7 +44,9 @@ Without the EmailJS IDs everything works except sending the form. It then shows 
 
 ```text
 src/
-  data/           the content: profile, projects, experience, skills, education
+  data/           the content: profile, projects, experience, skills, education,
+                  and ui.js for the interface text (labels, headings, messages)
+  i18n/           localize() and useContent(): the text in the page's language
   components/     one component per page section (Hero, Projects, Contact…)
   components/ui/  shared building blocks: Section, Button, Card, Tag, Icon
   hooks/          useActiveSection (highlights the current section in the navbar)
@@ -55,7 +57,7 @@ tests/            Vitest tests, one file per section; setup.js loads jest-dom
 resume/cv.html    the source of public/Ammar-Daham-CV.pdf
 ```
 
-**Content:** the profile, projects, jobs, skills and education live in `src/data/`, and the sections render from those files. Section headings are in the components.
+**Content:** the profile, projects, jobs, skills and education live in `src/data/`, and the sections render from those files. The interface text (section headings, buttons, form messages) is in `src/data/ui.js`. Text that changes with the language is written as `{ en: '…' }`.
 
 **CV:** to rebuild the PDF, open `resume/cv.html` in Chrome and choose Print → Save as PDF with paper size A4, margins "None" and "Background graphics" on. Save it over `public/Ammar-Daham-CV.pdf`.
 

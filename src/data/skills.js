@@ -1,6 +1,6 @@
 export const skillGroups = [
   {
-    title: 'Languages',
+    title: { en: 'Languages', fi: 'Ohjelmointikielet' },
     skills: [
       { name: 'Java', core: true },
       { name: 'JavaScript', core: true },
@@ -10,7 +10,7 @@ export const skillGroups = [
     ],
   },
   {
-    title: 'Front end',
+    title: { en: 'Front end', fi: 'Frontend' },
     skills: [
       { name: 'React', core: true },
       { name: 'Next.js' },
@@ -26,12 +26,12 @@ export const skillGroups = [
     ],
   },
   {
-    title: 'Back end',
+    title: { en: 'Back end', fi: 'Backend' },
     skills: [
       { name: 'Spring Boot', core: true },
       { name: 'Node.js' },
       { name: 'Express' },
-      { name: 'REST APIs', core: true },
+      { name: { en: 'REST APIs', fi: 'REST-rajapinnat' }, core: true },
       { name: 'GraphQL' },
       { name: 'FreeMarker', core: true },
     ],
@@ -47,7 +47,7 @@ export const skillGroups = [
     ],
   },
   {
-    title: 'Tools & ways of working',
+    title: { en: 'Tools & ways of working', fi: 'Työkalut ja työtavat' },
     skills: [
       { name: 'Git', core: true },
       { name: 'Docker', core: true },

@@ -1,7 +1,9 @@
 import { render, screen, within } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import App from '../src/App'
-import { profile } from '../src/data/profile'
+import { content } from '../src/i18n'
+
+const { profile } = content('en')
 
 describe('App', () => {
   it('renders the hero heading with my name', () => {

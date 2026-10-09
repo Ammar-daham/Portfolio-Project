@@ -1,7 +1,9 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import { profile } from '../src/data/profile'
 import Contact from '../src/components/Contact'
+import { content } from '../src/i18n'
+
+const { profile } = content('en')
 
 describe('Contact', () => {
   it('shows my email, location and LinkedIn next to the form', () => {
