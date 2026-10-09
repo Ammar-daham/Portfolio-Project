@@ -5,6 +5,7 @@ import { useTheme } from '../hooks/useTheme'
 import Button from './ui/Button'
 import Container from './ui/Container'
 import Icon from './ui/Icon'
+import LogoMark from './ui/LogoMark'
 import styles from './Navbar.module.css'
 
 const SECTION_IDS = [
@@ -75,16 +76,7 @@ const Navbar = () => {
             className={styles.logo}
             aria-label={t.backToTop(profile.name)}
           >
-            {/* The A from public/icon.svg, cropped to the letter */}
-            <svg
-              className={styles.mark}
-              viewBox="11 14 42 36"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M11.13 50 28.13 14h7.74l17 36h-7.74L32 22.2 18.87 50z" />
-              <circle cx="32" cy="39" r="5" />
-            </svg>
+            <LogoMark className={styles.mark} />
             <span className={styles.wordmark}>
               {first}
               <span>.</span>
