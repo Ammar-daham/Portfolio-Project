@@ -17,6 +17,7 @@ All notable changes to this site are listed here. The format follows
 - A logo: an A with the amber dot as its crossbar. It sits next to the name
   in the navbar (on its own on narrow phones) and replaces the "a." favicon
   and app icons.
+- The footer shows the logo with the name and location next to it.
 
 ### Removed
 

@@ -1,0 +1,8 @@
+.mark {
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+.mark circle {
+  fill: var(--color-accent);
+}
