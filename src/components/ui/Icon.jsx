@@ -43,6 +43,7 @@ const ICONS = {
       <circle cx="12" cy="10" r="3" />
     </>
   ),
+  check: <polyline points="20 6 9 17 4 12" />,
   'check-circle': (
     <>
       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
@@ -99,9 +100,14 @@ const ICONS = {
 }
 
 // Decorative by default (aria-hidden); pass `title` to give it a name.
+// Arrows that point along the line of text, so they flip in right-to-left
+// pages
+const MIRRORED = new Set(['arrow-right', 'arrow-up-right'])
+
 const Icon = ({ name, size = '1em', title, className = '', ...props }) => {
   const shape = ICONS[name]
   if (!shape) return null
+  const classes = [styles.icon, MIRRORED.has(name) && styles.mirror, className]
   return (
     <svg
       viewBox="0 0 24 24"
@@ -115,7 +121,7 @@ const Icon = ({ name, size = '1em', title, className = '', ...props }) => {
       focusable="false"
       aria-hidden={title ? undefined : true}
       role={title ? 'img' : undefined}
-      className={`${styles.icon} ${className}`.trim()}
+      className={classes.filter(Boolean).join(' ')}
       {...props}
     >
       {title && <title>{title}</title>}

@@ -12,8 +12,12 @@ All notable changes to this site are listed here. The format follows
   switch in the navbar (in the menu on phones) changes it. A choice that
   differs from the system is remembered.
 - A Finnish version of the site at `/fi/`, with its own title, description
-  and link preview. A switch in the navbar (in the menu on phones) moves
-  between English and Finnish and keeps your place on the page.
+  and link preview.
+- An Arabic version at `/ar/`, laid out right to left, with its own title,
+  description and link preview.
+- A language menu: a globe button in the navbar lists English, Suomi and
+  العربية (on phones, the menu lists the other two). Switching keeps your
+  place on the page.
 - A logo: an A with the amber dot as its crossbar. It sits next to the name
   in the navbar (on its own on narrow phones) and replaces the "a." favicon
   and app icons.

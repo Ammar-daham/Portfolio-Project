@@ -47,7 +47,8 @@
   display: flex;
   align-items: center;
   gap: 1.75rem;
-  margin: 0 0 0 auto;
+  margin: 0;
+  margin-inline-start: auto;
   padding: 0;
   list-style: none;
 }
@@ -72,9 +73,8 @@
 .link[aria-current]::after {
   content: '';
   position: absolute;
-  right: 0;
+  inset-inline: 0;
   bottom: 0;
-  left: 0;
   height: 2px;
   border-radius: 2px;
   background: var(--color-accent-text);
@@ -94,7 +94,8 @@
   gap: var(--space-3);
 }
 
-/* Square icon buttons: the theme switch, and the menu button on mobile */
+/* Square icon buttons: the language and theme switches, and the menu
+   button on mobile */
 .iconButton {
   display: inline-flex;
   flex-shrink: 0;
@@ -132,12 +133,55 @@
   display: none;
 }
 
-.language {
-  font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  letter-spacing: 0.04em;
+/* The globe button opens the list of languages below it, lined up with
+   the button's outer edge */
+.languages {
+  position: relative;
+}
+
+.languageMenu {
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  inset-inline-end: 0;
+  min-width: 10rem;
+  margin: 0;
+  padding: var(--space-1);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-lg);
+  list-style: none;
+}
+
+.languageLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-md);
+  line-height: 1.25;
+  color: var(--color-muted);
   text-decoration: none;
+  transition:
+    background-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+
+.languageLink:hover,
+.languageLink[aria-current] {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+.languageLink svg {
+  color: var(--color-accent-text);
+}
+
+.languageLink:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
 }
 
 @media (max-width: 900px) {
@@ -146,7 +190,7 @@
   }
 
   .actions {
-    margin-left: auto;
+    margin-inline-start: auto;
   }
 
   .toggle {
@@ -157,8 +201,7 @@
   .links {
     position: absolute;
     top: 100%;
-    right: 0;
-    left: 0;
+    inset-inline: 0;
     display: none;
     flex-direction: column;
     align-items: stretch;
@@ -213,7 +256,7 @@
     font-size: var(--text-base);
     line-height: 1.25;
     color: var(--color-muted);
-    text-align: left;
+    text-align: start;
     text-decoration: none;
     cursor: pointer;
     transition: color var(--duration-fast) var(--ease-out);

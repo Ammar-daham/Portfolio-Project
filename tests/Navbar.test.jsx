@@ -81,6 +81,73 @@ describe('Navbar', () => {
     expect(toggle).toHaveFocus()
   })
 
+  it('lists the languages behind the globe button, marking the current one', async () => {
+    const { user, nav } = setup()
+    const globe = within(nav).getByRole('button', { name: 'Language: English' })
+    expect(globe).toHaveAttribute('aria-expanded', 'false')
+
+    await user.click(globe)
+    expect(globe).toHaveAttribute('aria-expanded', 'true')
+    const list = document.getElementById(globe.getAttribute('aria-controls'))
+    const links = within(list).getAllByRole('link')
+    expect(
+      links.map((link) => [
+        link.textContent,
+        link.getAttribute('href'),
+        link.getAttribute('hreflang'),
+        link.getAttribute('lang'),
+      ]),
+    ).toEqual([
+      ['English', '/', 'en', 'en'],
+      ['Suomi', '/fi/', 'fi', 'fi'],
+      ['العربية', '/ar/', 'ar', 'ar'],
+    ])
+    expect(links[0]).toHaveAttribute('aria-current', 'page')
+    expect(links[1]).not.toHaveAttribute('aria-current')
+
+    await user.keyboard('{Escape}')
+    expect(globe).toHaveAttribute('aria-expanded', 'false')
+    expect(globe).toHaveFocus()
+
+    await user.click(globe)
+    await user.click(screen.getByRole('button', { name: 'Outside' }))
+    expect(globe).toHaveAttribute('aria-expanded', 'false')
+  })
+
+  it('keeps the section in view when switching language', async () => {
+    // jsdom can't load another page, so stop the link at the document
+    const stop = (event) => event.preventDefault()
+    document.addEventListener('click', stop)
+    window.location.hash = '#skills'
+    try {
+      const { user, nav } = setup()
+      await user.click(
+        within(nav).getByRole('button', { name: 'Language: English' }),
+      )
+      const list = document.getElementById('language-menu')
+      const suomi = within(list).getByRole('link', { name: 'Suomi' })
+      await user.click(suomi)
+      expect(new URL(suomi.href).pathname + new URL(suomi.href).hash).toBe(
+        '/fi/#skills',
+      )
+    } finally {
+      document.removeEventListener('click', stop)
+      window.location.hash = ''
+    }
+  })
+
+  it('offers the other languages as rows in the mobile menu', () => {
+    const { nav } = setup()
+
+    const rows = within(nav).getByRole('list').querySelectorAll('a[hreflang]')
+    expect(
+      [...rows].map((row) => [row.textContent, row.getAttribute('lang')]),
+    ).toEqual([
+      ['Suomi', 'fi'],
+      ['العربية', 'ar'],
+    ])
+  })
+
   it('closes the menu when a link is chosen or focus leaves the header', async () => {
     const { user, toggle, links } = setup()
 

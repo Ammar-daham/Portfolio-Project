@@ -2,3 +2,7 @@
   flex-shrink: 0;
   vertical-align: -0.125em;
 }
+
+.mirror:dir(rtl) {
+  transform: scaleX(-1);
+}

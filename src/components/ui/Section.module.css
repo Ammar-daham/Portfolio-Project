@@ -10,7 +10,7 @@
 
 .eyebrow {
   margin: 0 0 0.625rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
   font-size: var(--text-sm);
   line-height: var(--leading-normal);
   color: var(--color-accent-text);
@@ -28,6 +28,11 @@
   letter-spacing: var(--tracking-tight);
   text-wrap: balance;
   color: inherit;
+}
+
+/* Letter-spacing pulls Arabic's joined letters apart */
+.title:lang(ar) {
+  letter-spacing: 0;
 }
 
 .sub {
