@@ -5,12 +5,21 @@
     <loc>https://ammardaham.fi/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ammardaham.fi/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://ammardaham.fi/fi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ammardaham.fi/ar/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ammardaham.fi/" />
   </url>
   <url>
     <loc>https://ammardaham.fi/fi/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ammardaham.fi/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://ammardaham.fi/fi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ammardaham.fi/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ammardaham.fi/" />
+  </url>
+  <url>
+    <loc>https://ammardaham.fi/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ammardaham.fi/" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://ammardaham.fi/fi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ammardaham.fi/ar/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ammardaham.fi/" />
   </url>
 </urlset>

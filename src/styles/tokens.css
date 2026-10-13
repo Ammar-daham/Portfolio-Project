@@ -33,13 +33,16 @@
   --color-danger: #f87171;
   --color-nav-bg: rgb(11 13 16 / 0.8);
 
-  /* Type */
+  /* Type. Inter and JetBrains Mono have no Arabic letters, so Arabic
+     text falls through to Vazirmatn. */
   --font-sans:
-    'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto,
-    sans-serif;
+    'Inter Variable', 'Inter', 'Vazirmatn Variable', system-ui, -apple-system,
+    'Segoe UI', Roboto, sans-serif;
   --font-mono:
-    'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, SFMono-Regular,
-    Menlo, monospace;
+    'JetBrains Mono Variable', 'JetBrains Mono', 'Vazirmatn Variable',
+    ui-monospace, SFMono-Regular, Menlo, monospace;
+  /* Small labels: eyebrows, dates, roles. Monospace, except in Arabic */
+  --font-label: var(--font-mono);
   --text-xs: 0.75rem; /* 12px: tags */
   --text-sm: 0.8125rem; /* 13px: eyebrows, captions */
   --text-md: 0.875rem; /* 14px: nav, buttons, card copy */
@@ -85,6 +88,13 @@
   --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
   --duration-fast: 150ms;
   --duration-base: 250ms;
+}
+
+/* Arabic has no monospace letters: Arabic labels in the mono font get
+   Vazirmatn's letters with JetBrains Mono's wide spaces between words.
+   The logo and the stack tags, which stay Latin, keep the mono font. */
+:root:lang(ar) {
+  --font-label: var(--font-sans);
 }
 
 :root[data-theme='light'] {

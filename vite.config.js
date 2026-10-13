@@ -5,12 +5,14 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // Two pages share one bundle: English at /, Finnish at /fi/
+  // Three pages share one bundle: English at /, Finnish at /fi/ and Arabic
+  // at /ar/
   build: {
     rolldownOptions: {
       input: {
         en: resolve(import.meta.dirname, 'index.html'),
         fi: resolve(import.meta.dirname, 'fi/index.html'),
+        ar: resolve(import.meta.dirname, 'ar/index.html'),
       },
     },
   },

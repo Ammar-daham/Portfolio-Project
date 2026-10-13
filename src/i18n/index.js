@@ -7,10 +7,18 @@ import { skillGroups } from '../data/skills'
 import { ui } from '../data/ui'
 
 // Text that changes with the language is written where it's used, as
-// { en: '…', fi: '…' }. Everything else (links, dates, stack names) is
-// written once and shared by every language.
-export const LANGUAGES = ['en', 'fi']
+// { en: '…', fi: '…', ar: '…' }. Everything else (links, dates, stack
+// names) is written once and shared by every language.
+export const LANGUAGES = ['en', 'fi', 'ar']
 export const DEFAULT_LANGUAGE = 'en'
+
+// Each language's page and its name, written in that language. Arabic
+// pages run right to left (ar/index.html sets dir="rtl").
+export const PAGES = {
+  en: { href: '/', name: 'English' },
+  fi: { href: '/fi/', name: 'Suomi' },
+  ar: { href: '/ar/', name: 'العربية' },
+}
 
 const isPlainObject = (value) =>
   value !== null &&

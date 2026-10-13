@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest'
-import { LANGUAGES, content, localize } from '../src/i18n'
+import { certifications, education } from '../src/data/education'
+import { experience } from '../src/data/experience'
+import { profile } from '../src/data/profile'
+import { projects } from '../src/data/projects'
+import { skillGroups } from '../src/data/skills'
+import { ui } from '../src/data/ui'
+import { LANGUAGES, PAGES, content, localize } from '../src/i18n'
 
 describe('localize', () => {
   it("swaps each { en } object for that language's text and keeps shared values", () => {
@@ -40,5 +46,37 @@ describe('content', () => {
 
   it.each(LANGUAGES)('%s: every piece of text is resolved', (lang) => {
     expect(leftovers(content(lang))).toEqual([])
+  })
+
+  // A translation missing a language would quietly fall back to English
+  it('has every piece of text in every language', () => {
+    const incomplete = (value, path = '') => {
+      if (Array.isArray(value)) {
+        return value.flatMap((item, i) => incomplete(item, `${path}[${i}]`))
+      }
+      if (value && typeof value === 'object' && value.constructor === Object) {
+        const keys = Object.keys(value)
+        if (keys.length && keys.every((key) => LANGUAGES.includes(key))) {
+          const missing = LANGUAGES.filter((lang) => !(lang in value))
+          return missing.length ? [`${path} (${missing.join(', ')})`] : []
+        }
+        return keys.flatMap((key) => incomplete(value[key], `${path}.${key}`))
+      }
+      return []
+    }
+    const data = {
+      profile,
+      projects,
+      experience,
+      education,
+      certifications,
+      skillGroups,
+      ui,
+    }
+    expect(incomplete(data)).toEqual([])
+  })
+
+  it('names every language and its page', () => {
+    expect(Object.keys(PAGES)).toEqual(LANGUAGES)
   })
 })

@@ -24,7 +24,7 @@
 .when {
   margin: 0;
   padding-top: 0.25rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
   font-size: var(--text-sm);
   line-height: 1.5;
   text-transform: uppercase;
