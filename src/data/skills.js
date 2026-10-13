@@ -35,7 +35,7 @@ export const skillGroups = [
         name: {
           en: 'REST APIs',
           fi: 'REST-rajapinnat',
-          ar: 'واجهات REST البرمجية',
+          ar: 'REST APIs',
         },
         core: true,
       },
