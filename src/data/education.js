@@ -97,6 +97,31 @@ export const education = [
 
 export const certifications = [
   {
+    name: 'Data Mastery for Entrepreneurs',
+    issuer: 'TechClass Digital Academy',
+    date: '2025-03-15',
+  },
+  {
+    name: 'Cybersecurity for Managers (Media Companies)',
+    issuer: 'TechClass Digital Academy',
+    date: '2025-02-25',
+  },
+  {
+    name: 'Ethics of AI',
+    issuer: 'TechClass Digital Academy',
+    date: '2024-12-06',
+  },
+  {
+    name: 'eCommerce',
+    issuer: 'TechClass Digital Academy',
+    date: '2024-06-11',
+  },
+  {
+    name: 'Data Mining and Access Web Data',
+    issuer: 'TechClass Digital Academy',
+    date: '2024-05-02',
+  },
+  {
     name: 'Certified ScrumMaster® (CSM®)',
     issuer: 'Scrum Alliance',
     date: '2019-12-26',

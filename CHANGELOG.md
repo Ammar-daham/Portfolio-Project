@@ -22,6 +22,7 @@ All notable changes to this site are listed here. The format follows
   in the navbar (on its own on narrow phones) and replaces the "a." favicon
   and app icons.
 - The footer shows the logo with the name and location next to it.
+- Five TechClass certificates (2024–2025) in the Certifications card.
 
 ### Removed
 
